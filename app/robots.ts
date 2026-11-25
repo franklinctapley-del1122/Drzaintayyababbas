@@ -1,0 +1,1 @@
+import type { MetadataRoute } from "next"; export default function robots():MetadataRoute.Robots{return {rules:{userAgent:"*",allow:"/"},sitemap:"https://dr-zain-tayyab-abbas.vercel.app/sitemap.xml",host:"https://dr-zain-tayyab-abbas.vercel.app"}}
