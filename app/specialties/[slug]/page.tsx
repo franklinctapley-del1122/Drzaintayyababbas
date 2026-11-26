@@ -229,9 +229,15 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <li>What are the expected benefits, risks and follow-up requirements?</li>
               </ul>
               <h2>{service.uniqueTitle}</h2>
+              <h3>Why this information is relevant</h3>
               <p>{service.uniqueText}</p>
-              <h3>Related clinical information</h3>
+              <h3>How to use this information during your appointment</h3>
+              <p>Use these points to organise your reports and questions before meeting the doctor. The consultation should focus on your own diagnosis, findings and preferences.</p>
+              <h2>Related clinical information</h2>
+              <h3>Explore connected consultation topics</h3>
               <p>Explore related areas to understand how different surgical consultations connect. Each patient's care pathway is based on their own clinical findings.</p>
+              <h3>Academic and clinic information</h3>
+              <p>Review the doctor's <Link href="/research">research and publications</Link> or check the <Link href="/clinics">clinic locations and timings</Link> before requesting an appointment.</p>
               <ul>{service.related.map((item) => <li key={item}><Link href={item === "research" || item === "clinics" ? "/" + item : "/specialties/" + item}>{linkLabels[item] ?? item}</Link></li>)}</ul>
               <p className="small-note">This page provides general educational information and describes professional background documented in the doctor's CV. It does not establish a diagnosis, guarantee that a procedure is available or suitable, or replace an individual medical consultation. In an emergency, seek urgent medical care.</p>
             </article>
@@ -248,6 +254,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </aside>
           </div>
         </section>
+        <CTA />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({
+          "@context":"https://schema.org",
+          "@type":"FAQPage",
+          "mainEntity":service.faqs.map(([question,answer])=>({
+            "@type":"Question",
+            "name":question,
+            "acceptedAnswer":{"@type":"Answer","text":answer}
+          }))
+        })}} />
         <section className="section">
           <div className="container">
             <div className="eyebrow">Frequently asked questions</div>
@@ -262,7 +278,6 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </div>
           </div>
         </section>
-        <CTA />
       </main>
     </Shell>
   );
