@@ -158,6 +158,30 @@ export default function About() {
           </div>
         </section>
 
+        <section className="section section-white">
+          <div className="container">
+            <div className="eyebrow">Continuing medical education</div>
+            <h2>Professional development &amp; CME</h2>
+            <p className="large-copy">
+              Dr. Zain Tayyab Abbas has participated in the Shaukat Khanum Cancer
+              Symposium, with continuing medical education activities accredited
+              by the American Association of Continuing Medical Education (AACME).
+            </p>
+            <div className="related-grid">
+              <article className="related-card">
+                <strong>22nd Shaukat Khanum Cancer Symposium</strong>
+                <span>Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre · Peshawar, Pakistan · November 2–5, 2023</span>
+                <span>36.75 hours · Category I CME credit</span>
+              </article>
+              <article className="related-card">
+                <strong>23rd Shaukat Khanum Cancer Symposium</strong>
+                <span>Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre · Lahore, Pakistan · October 24–27, 2024</span>
+                <span>33.75 hours · Category I CME credit</span>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className="section">
           <div className="container two-col">
             <div>
