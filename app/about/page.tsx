@@ -172,11 +172,19 @@ export default function About() {
                 <strong>22nd Shaukat Khanum Cancer Symposium</strong>
                 <span>Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre · Peshawar, Pakistan · November 2–5, 2023</span>
                 <span>36.75 hours · Category I CME credit</span>
+                <a href="/images/cme-22.jpg" target="_blank" rel="noreferrer" aria-label="Open 22nd Shaukat Khanum Cancer Symposium certificate">
+                  <Image src="/images/cme-22.jpg" alt="AACME certificate for Dr. Zain Tayyab Abbas, 22nd Shaukat Khanum Cancer Symposium, 2023" width={1200} height={900} style={{width:"100%",height:"auto",marginTop:16,borderRadius:8}} />
+                </a>
+                <a className="under-link" href="/images/cme-22.jpg" target="_blank" rel="noreferrer">View full certificate ↗</a>
               </article>
               <article className="related-card">
                 <strong>23rd Shaukat Khanum Cancer Symposium</strong>
                 <span>Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre · Lahore, Pakistan · October 24–27, 2024</span>
                 <span>33.75 hours · Category I CME credit</span>
+                <a href="/images/cme-23.jpg" target="_blank" rel="noreferrer" aria-label="Open 23rd Shaukat Khanum Cancer Symposium certificate">
+                  <Image src="/images/cme-23.jpg" alt="AACME certificate for Dr. Zain Tayyab Abbas, 23rd Shaukat Khanum Cancer Symposium, 2024" width={1200} height={900} style={{width:"100%",height:"auto",marginTop:16,borderRadius:8}} />
+                </a>
+                <a className="under-link" href="/images/cme-23.jpg" target="_blank" rel="noreferrer">View full certificate ↗</a>
               </article>
             </div>
           </div>
