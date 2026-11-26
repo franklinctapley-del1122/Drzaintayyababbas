@@ -16,7 +16,7 @@ const specialties=[
   ["03","Colorectal Cancer Consultation","Colorectal and gastrointestinal cancer assessment information.","/specialties/colorectal-cancer-consultation","◎"],
   ["04","Endocrine Surgery","Consultation for selected thyroid and parathyroid conditions.","/specialties/endocrine-surgery","◇"],
   ["05","General Surgery","Assessment for abdominal, hernia, gallbladder and appendix concerns.","/specialties/general-surgery","＋"],
-  ["06","Laparoscopic Surgery","Information about minimally invasive surgical approaches.","/specialties/laparoscopic-surgery","⌕"]
+  ["06","Advanced Laparoscopy","Fellowship in Advanced Laparoscopy; consultation information for minimally invasive procedures.","/specialties/laparoscopic-surgery","⌕"]
 ];
 const focus=[
   ["Breast conditions","Breast lump assessment, diagnostic reports and discussion of treatment options.","/specialties/breast-cancer-consultation"],
