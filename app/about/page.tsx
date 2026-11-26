@@ -4,7 +4,7 @@ import { Shell, PageHero, CTA } from "../components";
 
 export const metadata = {
   title: "About Dr. Zain Tayyab Abbas | Surgical Oncology Lahore",
-  description: "Professional profile of Dr. Zain Tayyab Abbas, MBBS, FCPS (General Surgery), with a Fellowship in Surgical Oncology. View his clinical experience, areas of expertise and research.",
+  description: "Learn about Dr. Zain Tayyab Abbas, an MBBS and FCPS-qualified surgeon with fellowship training in Surgical Oncology, his hospital experience and clinical interests in Lahore.",
   alternates: { canonical: "/about" },
 };
 
@@ -27,7 +27,7 @@ export default function About() {
         <PageHero
           eyebrow="Professional profile"
           title="Dr. Zain Tayyab Abbas"
-          lead="MBBS, FCPS (General Surgery), Fellowship in Surgical Oncology"
+          lead="MBBS · FCPS (General Surgery) · Fellowship in Surgical Oncology"
         />
 
         <section className="section section-white">
@@ -42,27 +42,27 @@ export default function About() {
               />
             </div>
             <div>
-              <div className="eyebrow">About the doctor</div>
-              <h2>Surgical experience grounded in clinical practice</h2>
+              <div className="eyebrow">Professional overview</div>
+              <h2>Committed to informed, patient-focused surgical care</h2>
               <p className="large-copy">
-                Dr. Zain Tayyab Abbas is a surgeon with postgraduate qualifications
-                in General Surgery and fellowship training in Surgical Oncology.
-                He is currently serving as Senior Registrar in Surgical Unit 1 at
-                Jinnah Hospital, Lahore.
+                Dr. Zain Tayyab Abbas is a Lahore-based surgeon with postgraduate
+                training in General Surgery and fellowship training in Surgical
+                Oncology. He is currently serving as Senior Registrar in Surgical
+                Unit 1 at Jinnah Hospital, Lahore.
               </p>
               <p>
-                His clinical experience includes elective and emergency general
-                surgical procedures and the surgical management of oncological
-                conditions, including breast, gastrointestinal and hepatobiliary
-                malignancies. His professional work also includes pre- and
-                post-operative patient management, ICU exposure, clinical
-                teaching, research and audit activities.
+                His clinical background spans elective and emergency general
+                surgery, as well as the surgical care of patients with breast,
+                gastrointestinal and hepatobiliary malignancies. His experience
+                also includes perioperative patient management, critical care
+                exposure, clinical teaching and participation in research and
+                clinical audit activities.
               </p>
               <div className="fact-list">
                 <div><span>Current appointment</span><strong>Senior Registrar, Surgical Unit 1</strong></div>
-                <div><span>Institution</span><strong>Jinnah Hospital, Lahore</strong></div>
-                <div><span>Clinical interests</span><strong>Surgical Oncology · General Surgery</strong></div>
-                <div><span>Based in</span><strong>Lahore, Pakistan</strong></div>
+                <div><span>Hospital</span><strong>Jinnah Hospital, Lahore</strong></div>
+                <div><span>Clinical focus</span><strong>Surgical Oncology · General Surgery</strong></div>
+                <div><span>Location</span><strong>Lahore, Pakistan</strong></div>
               </div>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function About() {
               </article>
               <article className="related-card">
                 <strong>FCPS (General Surgery)</strong>
-                <span>College of Physicians &amp; Surgeons, Pakistan</span>
+                <span>College of Physicians &amp; Surgeons of Pakistan</span>
               </article>
               <article className="related-card">
                 <strong>MBBS</strong>
@@ -91,8 +91,8 @@ export default function About() {
 
         <section className="section section-white">
           <div className="container">
-            <div className="eyebrow">Professional background</div>
-            <h2>Clinical appointments</h2>
+            <div className="eyebrow">Career &amp; hospital experience</div>
+            <h2>Professional appointments</h2>
             <div className="papers">
               {experience.map(([date, role, place]) => (
                 <article className="paper" key={date + role}>
@@ -108,24 +108,25 @@ export default function About() {
         <section className="section">
           <div className="container two-col">
             <div>
-              <div className="eyebrow">Clinical practice</div>
-              <h2>Surgical skills &amp; competencies</h2>
+              <div className="eyebrow">Clinical expertise</div>
+              <h2>Surgical experience &amp; competencies</h2>
             </div>
             <div>
               <p>
-                His CV lists experience with laparotomy, hernia repair,
-                appendectomy, cholecystectomy, mastectomy, lymph node dissection,
-                bowel anastomosis, wound debridement, port insertion and
-                oncological resections.
+                Dr. Abbas's surgical experience includes laparotomy, hernia
+                repair, appendectomy, cholecystectomy, mastectomy, lymph node
+                dissection, bowel anastomosis, wound debridement, port insertion
+                and oncological resections.
               </p>
               <p>
-                His stated clinical competencies include emergency surgical care,
-                post-operative care, ICU management, ATLS principles and
+                His clinical competencies include emergency surgical care,
+                post-operative management, ICU management, ATLS principles and
                 interpretation of imaging and laboratory investigations.
               </p>
               <p>
-                Additional professional skills include research writing, audit
-                design, data analysis, leadership, teamwork and communication.
+                His wider professional skills include research writing, audit
+                design, data analysis, clinical teaching, teamwork and
+                communication.
               </p>
             </div>
           </div>
@@ -134,19 +135,24 @@ export default function About() {
         <section className="section section-white">
           <div className="container two-col">
             <div>
-              <div className="eyebrow">Academic work</div>
-              <h2>Research &amp; publications</h2>
+              <div className="eyebrow">Research &amp; academic contribution</div>
+              <h2>Research interests and publications</h2>
             </div>
             <div>
               <p>
-                His research interests and listed academic work include surgical
-                oncology, breast cancer, colorectal and small bowel tumours,
-                neuroendocrine tumours, ovarian conditions and surgical outcomes.
-                He has also been involved in research, clinical audits and
-                academic presentations.
+                Dr. Abbas has participated in research and academic work across
+                surgical oncology and general surgery. Topics listed in his
+                professional record include breast cancer, colorectal and small
+                bowel tumours, neuroendocrine tumours, ovarian conditions,
+                surgical outcomes and perioperative complications.
+              </p>
+              <p>
+                He has also contributed to clinical audits, academic
+                presentations and the teaching of junior doctors and medical
+                students.
               </p>
               <Link className="under-link" href="/research">
-                View selected research and publications ↗
+                Explore selected research publications ↗
               </Link>
             </div>
           </div>
@@ -155,19 +161,20 @@ export default function About() {
         <section className="section">
           <div className="container two-col">
             <div>
-              <div className="eyebrow">Patient information</div>
-              <h2>Preparing for a consultation</h2>
+              <div className="eyebrow">For patients</div>
+              <h2>Preparing for your consultation</h2>
             </div>
             <div>
               <p>
-                Patients are encouraged to bring relevant medical records,
-                previous consultation notes, biopsy or pathology reports,
+                To make the most of a consultation, patients may bring previous
+                medical records, consultation notes, biopsy or pathology reports,
                 laboratory results, imaging and a current list of medicines.
-                These details can help inform the clinical discussion.
+                These records help the treating team understand the patient's
+                medical history and discuss appropriate next steps.
               </p>
               <p className="small-note">
-                Website information is general and does not replace an
-                individual medical assessment or consultation.
+                Information on this website is for general guidance and does
+                not replace an individual medical assessment or consultation.
               </p>
               <Link className="under-link" href="/specialties">
                 Explore areas of consultation ↗
