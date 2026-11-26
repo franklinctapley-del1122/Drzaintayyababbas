@@ -165,7 +165,7 @@ const services: Record<string, Service> = {
       ["What should I ask before a laparoscopic operation?", "Ask why the operation is recommended, whether an open approach may be needed, the expected benefits and risks, recovery instructions and what follow-up will involve."],
       ["How do I arrange a laparoscopic surgery consultation in Lahore?", "Contact the clinic through the appointment WhatsApp link to confirm the current schedule, location and appointment availability."]
     ]
-  }
+  },
 
   "gastric-cancer-information": {
     title: "Gastric Cancer Information",
