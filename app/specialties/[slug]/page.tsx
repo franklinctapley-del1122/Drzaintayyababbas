@@ -141,10 +141,10 @@ const services: Record<string, Service> = {
     ]
   },
   "laparoscopic-surgery": {
-    title: "Laparoscopic Surgery",
-    short: "Laparoscopic surgery consultation in Lahore",
+    title: "Advanced Laparoscopy",
+    short: "Advanced laparoscopic surgery consultation in Lahore",
     intro: "Laparoscopic surgery is a minimally invasive approach that uses a camera and specialised instruments through small incisions. It may be suitable for selected conditions, but the safest approach depends on the diagnosis, previous operations, patient health and operative findings.",
-    context: "Dr. Zain Tayyab Abbas's CV documents laparotomy, cholecystectomy and other general surgical experience, along with participation in workshops related to safe laparoscopic cholecystectomy and minimally invasive surgery. Suitability for a laparoscopic approach must be assessed individually.",
+    context: "Dr. Zain Tayyab Abbas has stated a Fellowship in Advanced Laparoscopy. This consultation information covers minimally invasive approaches and assessment of suitability for selected procedures. The safest approach depends on the diagnosis, previous operations, patient health and operative findings.",
     topics: [
       ["How laparoscopic surgery is performed", "The surgeon uses a camera and specialised instruments inserted through small incisions to view and operate within the body. The technique and number of incisions depend on the procedure."],
       ["When a minimally invasive approach may be considered", "Laparoscopy may be considered for selected gallbladder, abdominal and other surgical conditions. The decision depends on the diagnosis, anatomy, medical history and available clinical resources."],
