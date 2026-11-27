@@ -8,13 +8,8 @@ export function Header(){
  const [menuOpen,setMenuOpen]=useState(false);
  const [specialtiesOpen,setSpecialtiesOpen]=useState(false);
  return <>
- <div className="reference-topbar"><div className="container reference-topbar-inner"><span>☎ <a href="tel:+923705978093">+92 370 5978093</a></span><span>⌖ Lahore, Pakistan</span><a href={wa}>WhatsApp appointment enquiries ↗</a></div></div>
- <section className="doctor-masthead"><div className="container doctor-masthead-inner">
-  <Link className="doctor-wordmark" href="/"><span className="doctor-monogram">ZA</span><span><strong>Dr. Zain Tayyab Abbas</strong><small>MBBS · FCPS (GENERAL SURGERY)</small><em>Surgical Oncologist &amp; Endocrine Surgeon · Lahore</em></span></Link>
-  <div className="masthead-credentials"><strong>Fellowship in Surgical Oncology</strong><span>Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre</span></div>
-  <a className="masthead-call" href={wa}><span>BOOK A CONSULTATION</span><strong>+92 370 5978093</strong><small>Confirm clinic timings on WhatsApp</small></a>
- </div></section>
  <header className="site-header reference-header"><div className="container nav">
+  <Link className="doctor-wordmark nav-doctor-wordmark" href="/"><span className="doctor-monogram">ZA</span><span><strong>Dr. Zain Tayyab Abbas</strong><small>MBBS · FCPS (GENERAL SURGERY)</small><em>Surgical Oncologist · Lahore</em></span></Link>
   <button className="mobile-menu-toggle" type="button" aria-label={menuOpen?"Close navigation":"Open navigation"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(v=>!v)}><span></span><span></span><span></span></button>
   <nav className={menuOpen?"is-open":""} aria-label="Main navigation">{links.map(([n,u])=>n==="Specialties"?<div className="nav-dropdown" key={u}><div className="nav-dropdown-row"><Link className="nav-dropdown-trigger" href={u} onClick={()=>setMenuOpen(false)}>Specialties</Link><button type="button" className="mobile-submenu-toggle" aria-label="Toggle specialties submenu" aria-expanded={specialtiesOpen} onClick={()=>setSpecialtiesOpen(v=>!v)}>⌄</button></div><div className={specialtiesOpen?"nav-dropdown-menu is-open":"nav-dropdown-menu"}><Link href={u} className="nav-dropdown-all" onClick={()=>setMenuOpen(false)}>All Specialties</Link>{specialtyLinks.map(([label,path])=><Link key={path} href={path} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</div></div>:<Link key={u} href={u} onClick={()=>setMenuOpen(false)}>{n==="Clinics"?"Clinic Locations":n}</Link>)}</nav>
   <a className="button button-small nav-booking" href={wa}>Book Appointment ↗</a>
