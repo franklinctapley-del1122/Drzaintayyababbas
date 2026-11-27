@@ -44,7 +44,7 @@ export default function Home(){
   <section className="credential-strip"><div className="container strip-grid"><div><span>QUALIFICATION</span><strong>MBBS · FCPS General Surgery</strong></div><div><span>SPECIALTIES</span><strong>Surgical Oncology · Endocrine Surgery</strong></div><div><span>LOCATION</span><strong>Lahore, Pakistan</strong></div></div></section>
   {/* 04 */}
   <section className="doctor-intro-showcase"><div className="container">
-    <div className="doctor-intro-heading"><span>DR. ZAIN TAYYAB ABBAS</span><p>MBBS, FCPS (General Surgery), Fellowship in Surgical Oncology</p><h2>Experienced Surgical Oncology <em>Specialist</em></h2></div>
+    <div className="doctor-intro-heading"><span>DR. ZAIN TAYYAB ABBAS</span><p>MBBS, FCPS (General Surgery), Fellowship in Surgical Oncology</p><h2>Best Surgical Oncology <em>Specialist</em></h2></div>
     <div className="doctor-intro-grid">
       <div className="doctor-experience-column"><ExperienceCounter/><h3>Years of Surgical Experience</h3><p>Dr. Zain Tayyab Abbas has worked across general surgery and surgical oncology roles in leading hospitals in Lahore, with experience in patient assessment, operative care and post-operative management.</p><Link className="under-link" href="/about">View professional profile ↗</Link></div>
       <div className="doctor-portrait"><Image src="/images/dr-zain-tayyab-abbas-main.webp" alt="Dr. Zain Tayyab Abbas" fill sizes="(max-width: 800px) 90vw, 28vw" style={{objectFit:"cover",objectPosition:"center 20%"}}/></div>
