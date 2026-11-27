@@ -768,3 +768,30 @@ body{background:#fff;color:#172c43}
 .doctor-focus-mark small{font-size:8px;letter-spacing:.6px;color:#657789}
 @media(max-width:900px){.doctor-intro-grid{grid-template-columns:1fr 1fr;gap:24px}.doctor-portrait{grid-column:2;grid-row:1 / span 2;height:420px}.doctor-experience-column{grid-column:1;grid-row:1}.doctor-about-column{grid-column:1 / -1;grid-row:3;max-width:700px;margin:0 auto}.doctor-intro-heading{margin-bottom:20px}}
 @media(max-width:600px){.doctor-intro-showcase{padding:40px 0}.doctor-intro-heading>span{font-size:15px}.doctor-intro-heading>p{font-size:12px}.doctor-intro-heading h2{font-size:34px}.doctor-intro-grid{grid-template-columns:1fr;gap:24px}.doctor-portrait{grid-column:auto;grid-row:auto;height:390px;max-width:390px;width:100%;margin:auto}.doctor-experience-column,.doctor-about-column{grid-column:auto;grid-row:auto}.doctor-experience-column{padding:0 5px}.doctor-years{font-size:76px}.doctor-experience-column h3{margin:8px 0 15px}.doctor-about-column{padding-top:0}.doctor-about-column h3{font-size:18px}.doctor-experience-column p,.doctor-about-column p{font-size:14px}}
+
+
+/* Subtle entrance animations for the first four homepage sections */
+@keyframes homeFadeUp{from{opacity:0;transform:translate3d(0,26px,0)}to{opacity:1;transform:translate3d(0,0,0)}}
+@keyframes homeFadeIn{from{opacity:0}to{opacity:1}}
+@keyframes homePhotoIn{from{opacity:0;transform:scale(1.045)}to{opacity:1;transform:scale(1)}}
+.home-hero.reference-hero .hero-copy{animation:homeFadeUp .85s cubic-bezier(.2,.7,.2,1) both}
+.home-hero.reference-hero .reference-hero-image{animation:homePhotoIn 1.2s ease-out both}
+.home-hero.reference-hero .reference-hero-arrow{animation:homeFadeIn .9s .45s both}
+.credential-strip .strip-grid>div{animation:homeFadeUp .7s ease-out both}
+.credential-strip .strip-grid>div:nth-child(1){animation-delay:.12s}
+.credential-strip .strip-grid>div:nth-child(2){animation-delay:.24s}
+.credential-strip .strip-grid>div:nth-child(3){animation-delay:.36s}
+.premium-trust .trust-row>div{animation:homeFadeUp .65s ease-out both}
+.premium-trust .trust-row>div:nth-child(1){animation-delay:.08s}
+.premium-trust .trust-row>div:nth-child(2){animation-delay:.16s}
+.premium-trust .trust-row>div:nth-child(3){animation-delay:.24s}
+.premium-trust .trust-row>div:nth-child(4){animation-delay:.32s}
+.premium-trust .trust-row>div:nth-child(5){animation-delay:.4s}
+.premium-trust .trust-row>div:nth-child(6){animation-delay:.48s}
+.doctor-intro-heading{animation:homeFadeUp .7s ease-out both}
+.doctor-experience-column{animation:homeFadeUp .8s .12s ease-out both}
+.doctor-portrait{animation:homePhotoIn 1s .2s ease-out both}
+.doctor-about-column{animation:homeFadeUp .8s .3s ease-out both}
+@media(prefers-reduced-motion:reduce){
+ .home-hero.reference-hero .hero-copy,.home-hero.reference-hero .reference-hero-image,.home-hero.reference-hero .reference-hero-arrow,.credential-strip .strip-grid>div,.premium-trust .trust-row>div,.doctor-intro-heading,.doctor-experience-column,.doctor-portrait,.doctor-about-column{animation:none!important;opacity:1!important;transform:none!important}
+}
