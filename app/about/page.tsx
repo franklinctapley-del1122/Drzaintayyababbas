@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Shell, PageHero, CTA } from "../components";
 
 export const metadata = {
-  title: "About Dr. Zain Tayyab Abbas | Surgical Oncology Lahore",
-  description: "Professional profile, qualifications, hospital appointments, documented surgical skills and academic work of Dr. Zain Tayyab Abbas in Lahore.",
+  title: "About Dr. Zain Tayyab Abbas | Surgical Oncologist Lahore",
+  description: "View Dr. Zain Tayyab Abbas’s qualifications, Surgical Oncology fellowship, hospital experience, research and doctor-confirmed consultation specialties in Lahore.",
   alternates: { canonical: "/about" },
 };
 
@@ -33,13 +33,13 @@ export default function About() {
             </div>
             <div>
               <div className="eyebrow">Professional overview</div>
-              <h2>Postgraduate training in general surgery and surgical oncology</h2>
+              <h2>Surgical Oncology training and Endocrine Surgery consultations</h2>
               <p className="large-copy">Dr. Zain Tayyab Abbas is a Lahore-based surgeon with an MBBS degree, FCPS in General Surgery and Fellowship training in Surgical Oncology at Shaukat Khanum Memorial Cancer Hospital & Research Centre. The CV records his current appointment as Senior Registrar in Surgical Unit 1 at Jinnah Hospital, Lahore, from July 2025.</p>
-              <p>His CV describes experience in elective and emergency general surgery and oncological surgery involving breast, gastrointestinal and hepatobiliary malignancies. It also records perioperative management, ICU exposure, clinical teaching, research and familiarity with multidisciplinary tumour board protocols.</p>
+              <p>His CV describes experience in elective and emergency general surgery and oncological surgery involving breast, gastrointestinal and hepatobiliary malignancies. It also records perioperative management, ICU exposure, clinical teaching, research and familiarity with multidisciplinary tumour board protocols.</p><p>Dr. Abbas has also identified Endocrine Surgery as one of his consultation specialties. This doctor-confirmed service positioning is presented separately from the formal qualifications and hospital appointments documented in the CV; patients should contact the clinic to confirm the specific consultation required.</p>
               <div className="fact-list">
                 <div><span>Current appointment (CV)</span><strong>Senior Registrar, Surgical Unit 1</strong></div>
                 <div><span>Hospital</span><strong>Jinnah Hospital, Lahore</strong></div>
-                <div><span>Specialist fellowship</span><strong>Surgical Oncology · Shaukat Khanum</strong></div>
+                <div><span>Specialist fellowship</span><strong>Surgical Oncology · Shaukat Khanum</strong></div><div><span>Doctor-confirmed consultation specialties</span><strong>Surgical Oncology · Endocrine Surgery</strong></div>
                 <div><span>Location</span><strong>Lahore, Pakistan</strong></div>
               </div>
             </div>
@@ -104,7 +104,7 @@ export default function About() {
             <div><div className="eyebrow">For patients</div><h2>Preparing for your consultation</h2></div>
             <div>
               <p>Patients may bring previous medical records, consultation notes, biopsy or pathology reports, laboratory results, imaging and a current list of medicines. These records help the treating team understand the medical history and discuss appropriate next steps.</p>
-              <p className="small-note">Professional qualifications, roles and experience on this page are summarised from the CV supplied for this profile. Clinic schedules and appointment availability can change; confirm details with the clinic. This website provides general information and does not replace an individual medical assessment or consultation.</p>
+              <p className="small-note">Formal qualifications, hospital roles and experience on this page are summarised from the CV supplied for this profile. Consultation specialties also reflect the doctor’s instructions for this website. Clinic schedules and appointment availability can change; confirm details with the clinic. This website provides general information and does not replace an individual medical assessment or consultation.</p>
               <Link className="under-link" href="/specialties">Explore areas of consultation ↗</Link>
             </div>
           </div>
