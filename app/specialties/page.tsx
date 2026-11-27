@@ -54,17 +54,16 @@ export default function Specialties() {
         <PageHero eyebrow="Clinical services" title="Surgical specialties in Lahore" lead="Explore consultation information across surgical oncology, breast and colorectal conditions, endocrine surgery, general surgery and laparoscopic approaches. The appropriate evaluation and management plan is determined individually after clinical assessment." />
         <section className="section section-white specialties-cards-section">
           <div className="container">
+            <h2 className="specialties-directory-title">Areas of Specialty</h2>
             <div className="specialties-card-grid">
               {data.map(([title, description, url], index) => (
                 <Link className="specialty-tile" href={url} key={url}>
                   <div className="specialty-tile-art" aria-hidden="true">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
                     <SpecialtyIcon index={index} />
                   </div>
                   <div className="specialty-tile-copy">
                     <h2>{title}</h2>
-                    <p>{description}</p>
-                    <span className="specialty-tile-link">Explore consultation <b>↗</b></span>
+                    <span className="specialty-tile-link">Explore <b>↗</b></span>
                   </div>
                 </Link>
               ))}
