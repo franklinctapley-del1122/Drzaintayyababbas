@@ -1005,3 +1005,25 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 .doctor-intro-heading>span,.doctor-intro-heading h2 em,.doctor-about-column h3,.doctor-focus-mark,.doctor-experience-column .under-link{color:#123f79!important}
 .doctor-focus-mark{border-color:#dce8f0!important}
 .doctor-years{color:#123f79!important}
+
+
+/* Trust-building sections: credentials, verifiable background and clear patient journey */
+.trust-credentials{background:#f5f8fc}
+.trust-credentials-heading,.trust-clarity-heading{max-width:760px;margin:0 auto 34px;text-align:center}
+.trust-credentials-heading h2,.trust-clarity-heading h2{font-size:clamp(30px,3vw,44px);line-height:1.15;color:#18324d;margin:10px 0 12px}
+.trust-credentials-heading p,.trust-clarity-heading p{color:#617286;line-height:1.8;margin:0}
+.trust-credentials-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.trust-credentials-grid article{background:#fff;border:1px solid #dce6f0;border-radius:12px;padding:24px 20px;min-height:190px}
+.trust-card-index{display:block;color:#1a5b91;font-size:11px;font-weight:800;letter-spacing:1px;margin-bottom:18px}
+.trust-credentials-grid h3{font-size:19px;line-height:1.35;color:#18324d;margin:0 0 10px}
+.trust-credentials-grid p{font-size:14px;line-height:1.7;color:#617286;margin:0}
+.trust-credentials-link{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin-top:26px}
+.trust-clarity-section{background:#fff}
+.trust-clarity-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.trust-clarity-grid article{border:1px solid #dce6f0;border-radius:12px;padding:24px;background:#fbfdff}
+.trust-clarity-grid article>span{display:inline-flex;width:34px;height:34px;border-radius:50%;align-items:center;justify-content:center;background:#e8f0f8;color:#123f79;font-weight:800;margin-bottom:14px}
+.trust-clarity-grid h3{color:#18324d;font-size:19px;margin:0 0 8px}
+.trust-clarity-grid p{color:#617286;font-size:14px;line-height:1.75;margin:0}
+.trust-clarity-note{max-width:850px;margin:24px auto 0;text-align:center;color:#617286;font-size:13px;line-height:1.7}
+@media(max-width:900px){.trust-credentials-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.trust-credentials-grid,.trust-clarity-grid{grid-template-columns:1fr}.trust-credentials-grid article,.trust-clarity-grid article{min-height:0}.trust-credentials-link{gap:12px;flex-direction:column;align-items:center}}
