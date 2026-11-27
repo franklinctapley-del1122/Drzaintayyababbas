@@ -139,3 +139,10 @@ h1,h2,h3,p,a,strong{overflow-wrap:anywhere}
 .specialties-cards-note{font-size:11px;color:#718080;line-height:1.7;margin:25px 0 0;max-width:850px}
 @media(max-width:950px){.specialties-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.specialties-cards-section{padding-top:55px;padding-bottom:60px}.specialties-card-grid{grid-template-columns:1fr;gap:15px}.specialty-tile-art{height:135px}.specialty-tile-copy{padding:21px}}
+
+/* User-provided image for the first specialty card */
+.specialty-tile:first-child .specialty-tile-art{
+  background-image:linear-gradient(90deg,#102c35b8,#102c3540),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1ztFRSX29ji__IdGgC7kYnfnECVNl5iEOvRcKfcIFWA&s=10");
+  background-size:cover;
+  background-position:center;
+}
