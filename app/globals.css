@@ -688,3 +688,20 @@ body{background:#fff;color:#172c43}
 .gallery-page-grid img{display:block;width:100%;height:320px;object-fit:cover}
 .gallery-page-grid figcaption{padding:15px 17px;color:#19466f;font-size:13px;font-weight:700}
 @media(max-width:640px){.gallery-page-grid{grid-template-columns:1fr;gap:16px}.gallery-page-grid img{height:240px}}
+
+
+/* Homepage hero: closely follow the supplied Surgical Oncology reference */
+.home-hero.reference-hero{height:500px;min-height:500px;padding:0;position:relative;isolation:isolate;overflow:hidden;background:#dce9f1}
+.reference-hero-image{position:absolute;z-index:-2;inset:0;background-image:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.82) 24%,rgba(255,255,255,.35) 49%,rgba(255,255,255,.04) 100%),url("https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=2200&q=90");background-position:center 42%;background-size:cover}
+.reference-hero-inner{height:100%;display:flex;align-items:center}
+.reference-hero .hero-copy{width:min(720px,58%);padding:30px 0 45px;z-index:1}
+.reference-hero .hero-copy .eyebrow{font-size:0;line-height:0;margin:0}
+.reference-hero .hero-copy h1{font-size:clamp(58px,5.3vw,76px);font-weight:800;line-height:1.03;letter-spacing:-2px;color:#202020;margin:0 0 24px}
+.reference-hero .hero-copy h1 em{font-style:normal;color:#079fd0}
+.reference-hero .hero-lead{max-width:650px;color:#242a30;font-size:22px;font-weight:650;line-height:1.65;margin:0 0 34px}
+.reference-hero .hero-actions .button{background:#079fd0;color:#fff;border-radius:5px;padding:19px 38px;font-size:16px;font-weight:700;box-shadow:none}
+.reference-hero .hero-actions .button:hover{background:#087fae}
+.reference-hero-arrow{position:absolute;top:50%;transform:translateY(-50%);width:62px;height:62px;border-radius:22px;background:#fff;color:#111;display:grid;place-items:center;font-size:40px;font-weight:300;box-shadow:0 4px 18px #12344a14}
+.reference-hero-prev{left:22px}.reference-hero-next{right:22px}
+@media(max-width:850px){.home-hero.reference-hero{height:480px;min-height:480px}.reference-hero .hero-copy{width:72%}.reference-hero .hero-copy h1{font-size:58px}.reference-hero .hero-lead{font-size:18px}.reference-hero-image{background-position:58% center;background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffb8 42%,#ffffff20 100%),url("https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1600&q=85")}}
+@media(max-width:600px){.home-hero.reference-hero{height:480px;min-height:480px}.reference-hero .hero-copy{width:100%;padding:25px 10px 55px}.reference-hero .hero-copy h1{font-size:52px;letter-spacing:-1.4px}.reference-hero .hero-lead{font-size:16px;line-height:1.5;max-width:90%}.reference-hero-arrow{width:40px;height:48px;border-radius:14px;font-size:30px}.reference-hero-prev{left:8px}.reference-hero-next{right:8px}.reference-hero-image{background-position:60% center;background-image:linear-gradient(90deg,#ffffffed 0%,#ffffffc9 52%,#ffffff30 100%),url("https://images.unsplash.com/photo-1551190822-a9333d879b1f?auto=format&fit=crop&w=1100&q=80")}}
