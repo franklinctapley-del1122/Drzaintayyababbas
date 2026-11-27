@@ -12,8 +12,8 @@ type Service = {
 const services: Record<string, Service> = {
   "surgical-oncology": {
     title: "Surgical Oncology",
-    short: "Surgical oncology consultation in Lahore",
-    intro: "Surgical oncology is the branch of surgery concerned with the assessment and operative management of cancer. Decisions depend on the cancer type, site, stage, pathology, imaging, general health and the wider treatment plan.",
+    short: "Surgical oncologist consultation in Lahore for cancer-related surgical assessment and treatment planning",
+    intro: "Surgical oncology is the branch of surgery concerned with assessing cancers that may require an operation and considering surgery within the wider treatment plan. Patients in Lahore may seek a surgical oncology opinion after a cancer diagnosis, an abnormal biopsy or a referral for specialist review. Decisions depend on cancer type, site, stage, pathology, imaging, general health and the wider treatment plan.",
     context: "Dr. Zain Tayyab Abbas has fellowship training in Surgical Oncology at Shaukat Khanum Memorial Cancer Hospital & Research Centre. His CV documents clinical and operative experience involving breast, gastrointestinal and hepatobiliary malignancies, as well as oncological resections and lymph node dissection.",
     topics: [
       ["Understanding a surgical oncology consultation", "A consultation reviews the diagnosis, biopsy or pathology findings, imaging, previous treatment and the reason surgery is being considered. The aim is to understand the clinical picture and discuss appropriate next steps."],
@@ -22,7 +22,7 @@ const services: Record<string, Service> = {
       ["What influences a surgical decision?", "The site and extent of disease, histopathology, imaging, fitness for surgery, prior treatment and the goals of care all influence whether an operation is appropriate and which approach may be considered."]
     ],
     preparation: ["Biopsy or histopathology reports, if available", "CT, MRI, ultrasound or PET scan reports and image discs", "Previous discharge summaries and operation notes", "Current medicines, allergies and relevant medical history", "A referral letter or oncology treatment summary, if available"],
-    uniqueTitle: "Why pathology and imaging should be reviewed together",
+    uniqueTitle: "Surgical oncology consultation in Lahore: why complete records matter",
     uniqueText: "A useful consultation does not rely on a scan or a biopsy result in isolation. The clinical history, pathology, imaging and previous treatment need to be considered together. Bring the actual reports and images where possible, so the treating team can review the available evidence and identify whether further assessment is needed.",
     related: ["breast-cancer-consultation", "colorectal-cancer-consultation", "endocrine-surgery", "general-surgery"],
     faqs: [
@@ -90,9 +90,9 @@ const services: Record<string, Service> = {
   },
   "endocrine-surgery": {
     title: "Endocrine Surgery",
-    short: "Endocrine surgery consultation in Lahore for assessment of thyroid and parathyroid conditions",
-    intro: "Endocrine surgery focuses on the surgical assessment and management of selected conditions affecting hormone-producing glands, including the thyroid and parathyroid. The appropriate pathway depends on the diagnosis, symptoms, examination, blood tests, imaging and any tissue results.",
-    context: "Dr. Zain Tayyab Abbas identifies Endocrine Surgery as one of his consultation specialties. The specific assessment and any treatment recommendation depend on the patient’s diagnosis and clinical findings. Patients should confirm the exact service and appointment details with the clinic before travelling.",
+    short: "Endocrine surgeon consultation in Lahore for assessment of selected thyroid and parathyroid conditions",
+    intro: "Endocrine surgery focuses on the assessment and surgical management of selected conditions affecting hormone-producing glands. This consultation information covers thyroid and parathyroid concerns, including nodules, abnormal investigations and conditions where a surgical opinion may be considered. The appropriate pathway depends on the diagnosis, symptoms, examination, blood tests, imaging and any tissue results.",
+    context: "Dr. Zain Tayyab Abbas identifies Endocrine Surgery as one of his consultation specialties in Lahore. The consultation should be guided by the patient’s symptoms, examination, blood tests, imaging and any previous biopsy or pathology findings. The exact assessment and treatment recommendation depend on individual clinical findings; contact the clinic to confirm appointment availability before travelling.",
     topics: [
       ["Thyroid and neck investigations", "Assessment may include thyroid function blood tests and ultrasound. If a nodule or other finding needs further evaluation, additional tests may be considered according to clinical findings."],
       ["Understanding thyroid nodules", "Thyroid nodules are common and many are not cancerous. Their assessment depends on ultrasound characteristics, size, symptoms, relevant history and, in selected cases, needle sampling."],
@@ -100,7 +100,7 @@ const services: Record<string, Service> = {
       ["Planning a surgical opinion", "The decision to consider surgery depends on the diagnosis, symptoms, test results, risks and expected benefits. Patients should receive an explanation of the available options before making a decision."]
     ],
     preparation: ["Thyroid or neck ultrasound report and images", "Thyroid function and calcium blood test results", "Fine needle aspiration or pathology reports, if available", "Previous specialist letters and relevant medical history", "Current medicines and supplements"],
-    uniqueTitle: "Keep blood tests and ultrasound results together",
+    uniqueTitle: "Endocrine surgery consultation in Lahore: organise your test results",
     uniqueText: "Thyroid and parathyroid assessment often relies on more than one type of investigation. Bringing laboratory results alongside the original ultrasound report allows the findings to be reviewed in context and helps identify whether further assessment is needed.",
     related: ["surgical-oncology", "general-surgery", "laparoscopic-surgery", "research"],
     faqs: [
@@ -413,8 +413,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const educationalOnly = slug.endsWith("-information") || slug === "laparoscopic-surgery";
   if (!service) return { title: "Surgical Consultation in Lahore" };
   return {
-    title: service.title + (slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery" ? " | Patient Information" : " Consultation in Lahore"),
-    description: service.short + ". Learn about assessment, relevant clinical context, preparation and questions to discuss with an appropriate healthcare professional.",
+    title: slug === "surgical-oncology" ? "Surgical Oncologist in Lahore | Dr. Zain Tayyab Abbas" : slug === "endocrine-surgery" ? "Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas" : service.title + (slug.endsWith("-information") || slug === "laparoscopic-surgery" ? " | Patient Information" : " Consultation in Lahore"),
+    description: service.short + ". Learn about consultation scope, clinical assessment, reports to bring and questions to discuss with the doctor in Lahore.",
     alternates: { canonical: "/specialties/" + slug }
   };
 }
