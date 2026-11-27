@@ -197,7 +197,7 @@ const services: Record<string, Service> = {
     title: "Thyroid Cancer Information",
     short: "Patient information about thyroid nodules, biopsy and thyroid cancer assessment in Lahore",
     intro: "Thyroid cancer assessment starts with understanding a thyroid lump or nodule, relevant symptoms, ultrasound features and, when indicated, a needle sample. Not every thyroid nodule is cancer and not every nodule requires an operation.",
-    context: "Dr. Zain Tayyab Abbas lists Endocrine Surgery among his consultation areas. This page explains common assessment steps and should not be read as confirmation of an individual diagnosis or a specific procedure.",
+    context: "The supplied CV does not document a dedicated endocrine surgery qualification or thyroid surgery experience. This page is general patient education about thyroid assessment and referral pathways, not a claim that Dr. Abbas provides thyroid cancer surgery.",
     topics: [
       ["Thyroid ultrasound and risk assessment", "Ultrasound describes the size and appearance of a nodule and its relationship to surrounding structures. The findings help clinicians decide whether monitoring or further tests may be appropriate."],
       ["Fine needle aspiration and pathology", "When indicated, fine needle aspiration collects cells from a nodule for laboratory assessment. The result is interpreted alongside ultrasound findings and clinical history."],
@@ -428,7 +428,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     "surgical-oncology": "Surgical oncology consultation",
     "breast-cancer-consultation": "breast cancer consultation",
     "colorectal-cancer-consultation": "colorectal cancer consultation",
-    "endocrine-surgery": "endocrine surgery consultation",
+    "endocrine-surgery": "thyroid and endocrine patient information",
     "general-surgery": "general surgery consultation",
     "laparoscopic-surgery": "laparoscopic surgery consultation",
     "research": "research and publications",
@@ -490,7 +490,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             </aside>
           </div>
         </section>
-        <CTA />
+        {!educationalOnly && <CTA />}
         <script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify({
           "@context":"https://schema.org",
           "@type":"FAQPage",
