@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import { Shell, PageHero, CTA } from "../../components";
 
 type FAQ = [string, string];
@@ -410,7 +411,6 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services[slug];
-  const educationalOnly = slug.endsWith("-information") || slug === "laparoscopic-surgery";
   if (!service) return { title: "Surgical Consultation in Lahore" };
   return {
     title: slug === "surgical-oncology" ? "Surgical Oncologist in Lahore | Dr. Zain Tayyab Abbas" : slug === "endocrine-surgery" ? "Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas" : service.title + (slug.endsWith("-information") || slug === "laparoscopic-surgery" ? " | Patient Information" : " Consultation in Lahore"),
@@ -423,7 +423,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const service = services[slug];
   const educationalOnly = slug.endsWith("-information") || slug === "laparoscopic-surgery";
-  if (!service) return <Shell><main><PageHero eyebrow="Specialties" title="Specialty information" lead="Please explore our consultation areas." /></main></Shell>;
+  if (!service) notFound();
 
   const linkLabels: Record<string, string> = {
     "surgical-oncology": "Surgical oncology consultation",
