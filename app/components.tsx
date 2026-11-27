@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 export const wa="https://wa.me/923705978093";
-const links=[["Home","/"],["About","/about"],["Specialties","/specialties"],["Research","/research"],["Clinics","/clinics"],["Contact","/contact"]];
+const links=[["Home","/"],["About","/about"],["Specialties","/specialties"],["Blog","/blog"],["Research","/research"],["Clinics","/clinics"],["Contact","/contact"]];
 const specialtyLinks=[["Surgical Oncology","/specialties/surgical-oncology"],["Breast Cancer Consultation","/specialties/breast-cancer-consultation"],["Colorectal Cancer Consultation","/specialties/colorectal-cancer-consultation"],["Endocrine Surgery","/specialties/endocrine-surgery"],["General Surgery","/specialties/general-surgery"],["Advanced Laparoscopy","/specialties/laparoscopic-surgery"],["Gastric Cancer Information","/specialties/gastric-cancer-information"],["Thyroid Cancer Information","/specialties/thyroid-cancer-information"],["Ovarian Cancer Information","/specialties/ovarian-cancer-information"],["Uterine Cancer Information","/specialties/uterine-cancer-information"],["Testicular Cancer Information","/specialties/testicular-cancer-information"],["Esophageal Cancer Information","/specialties/esophageal-cancer-information"],["Sarcoma Information","/specialties/sarcoma-information"],["Gallbladder Surgery Information","/specialties/gallbladder-surgery-information"],["Hernia Information","/specialties/hernia-information"]];
 export function Header(){
  const [menuOpen,setMenuOpen]=useState(false);
