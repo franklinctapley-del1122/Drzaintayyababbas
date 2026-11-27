@@ -16,9 +16,10 @@ const images = [
 
 export default function GalleryPage() {
   return <Shell><main>
-    <PageHero eyebrow="Clinical & professional gallery" title="Inside the practice of surgical care" lead="A selection of healthcare and clinical environment images related to surgical care." />
-    <section className="section clinical-gallery-page"><div className="container">
-      <p className="gallery-disclaimer">These are illustrative stock photographs of clinical environments. They are not presented as photographs of Dr. Zain Tayyab Abbas, his patients, clinics or surgical procedures.</p>
+    <section className="gallery-title-band"><div className="container"><h1>Image <span>Gallery</span></h1><div className="gallery-breadcrumb"><a href="/">⌂ Home</a><span>›</span><span>Gallery</span><span>›</span><strong>Images</strong></div></div></section>
+    <section className="gallery-reference-section"><div className="container">
+      <div className="gallery-reference-heading"><span>IMAGES GALLERY</span><h2>Surgical <em>Image Gallery</em></h2></div>
+      <p className="gallery-disclaimer">These are illustrative stock photographs of clinical environments, not photographs of Dr. Zain Tayyab Abbas, his patients, clinics or surgical procedures. Actual professional photographs can be added when supplied.</p>
       <div className="gallery-page-grid">{images.map((item) => <figure key={item.src}><img src={item.src} alt={item.alt} loading="lazy"/><figcaption>{item.caption}</figcaption></figure>)}</div>
     </div></section>
   </main><CTA/></Shell>;
