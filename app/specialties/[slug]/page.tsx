@@ -89,10 +89,10 @@ const services: Record<string, Service> = {
     ]
   },
   "endocrine-surgery": {
-    title: "Endocrine Surgery",
-    short: "Endocrine surgery consultation in Lahore",
-    intro: "Endocrine surgery concerns conditions involving hormone-producing glands, including the thyroid and parathyroid glands. A surgical consultation reviews symptoms, examination findings, laboratory tests and imaging to determine whether specialist surgical assessment is appropriate.",
-    context: "Dr. Zain Tayyab Abbas lists Endocrine Surgery among his consultation areas. The need for surgery and the specific operation, if any, depend on the confirmed diagnosis and individual assessment.",
+    title: "Thyroid & Endocrine Conditions Information",
+    short: "General patient information about thyroid and endocrine investigations and referral pathways",
+    intro: "This educational page explains common investigations for thyroid and parathyroid conditions. The appropriate assessment depends on symptoms, examination, blood tests and imaging, and may require referral to an endocrinologist, ENT surgeon or another relevant specialist.",
+    context: "The supplied CV does not document a dedicated endocrine surgery qualification or thyroid/parathyroid surgical experience. This page is general patient education and does not present endocrine surgery as a verified specialist service offered by Dr. Abbas.",
     topics: [
       ["Thyroid and neck investigations", "Assessment may include thyroid function blood tests and ultrasound. If a nodule or other finding needs further evaluation, additional tests may be considered according to clinical findings."],
       ["Understanding thyroid nodules", "Thyroid nodules are common and many are not cancerous. Their assessment depends on ultrasound characteristics, size, symptoms, relevant history and, in selected cases, needle sampling."],
@@ -141,10 +141,10 @@ const services: Record<string, Service> = {
     ]
   },
   "laparoscopic-surgery": {
-    title: "Advanced Laparoscopy",
-    short: "Advanced laparoscopic surgery consultation in Lahore",
+    title: "Laparoscopic Surgery Information",
+    short: "Patient information about laparoscopic surgery and minimally invasive approaches",
     intro: "Laparoscopic surgery is a minimally invasive approach that uses a camera and specialised instruments through small incisions. It may be suitable for selected conditions, but the safest approach depends on the diagnosis, previous operations, patient health and operative findings.",
-    context: "Dr. Zain Tayyab Abbas has stated a Fellowship in Advanced Laparoscopy. This consultation information covers minimally invasive approaches and assessment of suitability for selected procedures. The safest approach depends on the diagnosis, previous operations, patient health and operative findings.",
+    context: "The supplied CV does not list a Fellowship in Advanced Laparoscopy. It does record a workshop on safe laparoscopic cholecystectomy, presentations involving laparoscopic procedures and participation in minimally invasive surgery workshops. This page provides general information; it does not claim an advanced laparoscopy fellowship or a dedicated service.",
     topics: [
       ["How laparoscopic surgery is performed", "The surgeon uses a camera and specialised instruments inserted through small incisions to view and operate within the body. The technique and number of incisions depend on the procedure."],
       ["When a minimally invasive approach may be considered", "Laparoscopy may be considered for selected gallbladder, abdominal and other surgical conditions. The decision depends on the diagnosis, anatomy, medical history and available clinical resources."],
@@ -410,6 +410,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services[slug];
+  const educationalOnly = slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery";
   if (!service) return { title: "Surgical Consultation in Lahore" };
   return {
     title: service.title + " Consultation in Lahore",
@@ -477,10 +478,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <p className="small-note">This page provides general educational information and describes professional background documented in the doctor's CV. It does not establish a diagnosis, guarantee that a procedure is available or suitable, or replace an individual medical consultation. In an emergency, seek urgent medical care.</p>
             </article>
             <aside className="contact-aside">
-              <span className="clinic-index">APPOINTMENTS</span>
-              <h3>Arrange a consultation</h3>
-              <p>Contact the clinic to confirm the current appointment schedule, location and availability.</p>
-              <a className="button" href="https://wa.me/923705978093">WhatsApp the clinic ↗</a>
+              <span className="clinic-index">{educationalOnly ? "PATIENT GUIDANCE" : "APPOINTMENTS"}</span>
+              <h3>{educationalOnly ? "Finding the right specialist" : "Arrange a consultation"}</h3>
+              <p>{educationalOnly ? "This page is general educational information. Contact your treating doctor or an appropriate specialist service for individual assessment and referral advice." : "Contact the clinic to confirm the current appointment schedule, location and availability."}</p>
+              {!educationalOnly && <a className="button" href="https://wa.me/923705978093">WhatsApp the clinic ↗</a>}
               <hr />
               <strong>Clinic locations</strong>
               <p>Iqraa Medical Complex<br />Johar Town, Lahore</p>
