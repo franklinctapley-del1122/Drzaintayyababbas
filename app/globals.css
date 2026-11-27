@@ -160,3 +160,9 @@ h1,h2,h3,p,a,strong{overflow-wrap:anywhere}
 .specialty-tile-art svg{width:68px;height:68px;color:#ffffffd9;filter:drop-shadow(0 3px 8px #102c3540)}
 .specialty-tile-art span{position:relative;z-index:1}
 @media(max-width:620px){.specialty-tile-art svg{width:60px;height:60px}}
+
+
+/* Official CC0 Health Icons used for specialty artwork */
+.specialty-medical-icon{width:76px;height:76px;object-fit:contain;display:block;filter:brightness(0) invert(1);opacity:.92;position:relative;z-index:1}
+.specialty-tile-art{isolation:isolate}
+@media(max-width:620px){.specialty-medical-icon{width:66px;height:66px}}
