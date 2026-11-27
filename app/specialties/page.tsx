@@ -14,7 +14,6 @@ const data = [
   ["Endocrine Surgery", "Consultation information for selected conditions involving the thyroid, parathyroid and other endocrine glands.", "/specialties/endocrine-surgery"],
   ["General Surgery", "Assessment information for abdominal, hernia, gallbladder, appendix and other general surgical concerns.", "/specialties/general-surgery"],
   ["Advanced Laparoscopy", "Fellowship in Advanced Laparoscopy; learn about minimally invasive approaches, patient selection and surgical planning.", "/specialties/laparoscopic-surgery"],
-
   ["Gastric Cancer Information", "Understand stomach cancer investigations, biopsy, staging and treatment planning.", "/specialties/gastric-cancer-information"],
   ["Thyroid Cancer Information", "Learn about thyroid nodules, ultrasound, needle sampling and specialist assessment.", "/specialties/thyroid-cancer-information"],
   ["Ovarian Cancer Information", "Patient guidance on ovarian masses, imaging, pathology and specialist referral.", "/specialties/ovarian-cancer-information"],
@@ -31,15 +30,24 @@ export default function Specialties() {
     <Shell>
       <main>
         <PageHero eyebrow="Clinical services" title="Surgical specialties in Lahore" lead="Explore consultation information across surgical oncology, breast and colorectal conditions, endocrine surgery, general surgery and laparoscopic approaches. The appropriate evaluation and management plan is determined individually after clinical assessment." />
-        <section className="section section-white">
-          <div className="container service-list">
-            {data.map(([title, description, url], index) => (
-              <article className="service-row" key={url}>
-                <span className="card-number">0{index + 1}</span>
-                <div><h2>{title}</h2><p>{description}</p></div>
-                <Link className="under-link" href={url}>Explore consultation ↗</Link>
-              </article>
-            ))}
+        <section className="section section-white specialties-cards-section">
+          <div className="container">
+            <div className="specialties-card-grid">
+              {data.map(([title, description, url], index) => (
+                <Link className="specialty-tile" href={url} key={url}>
+                  <div className="specialty-tile-art" aria-hidden="true">
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <i>✳</i>
+                  </div>
+                  <div className="specialty-tile-copy">
+                    <h2>{title}</h2>
+                    <p>{description}</p>
+                    <span className="specialty-tile-link">Explore consultation <b>↗</b></span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <p className="specialties-cards-note">Some pages provide general educational information and referral guidance; they do not imply that every condition or cancer type is a dedicated specialist service.</p>
           </div>
         </section>
         <CTA />
