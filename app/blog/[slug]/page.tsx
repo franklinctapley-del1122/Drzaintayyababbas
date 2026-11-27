@@ -119,12 +119,12 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   return <Shell><main className="blog-article-page">
     <div className="container blog-article-wrap">
       <nav className="blog-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/blog">Blog</Link><span>/</span><span>{article.category}</span></nav>
-      <header className="blog-article-header"><span className="eyebrow">{article.category} · PATIENT EDUCATION</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="blog-article-byline">General educational information <span>•</span> For discussion with your healthcare professional</div></header>
+      <header className="blog-article-header"><span className="eyebrow">{article.category} · PATIENT EDUCATION</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="blog-article-byline">Professional profile: <Link href="/about">Dr. Zain Tayyab Abbas</Link> <span>•</span> General patient education <span>•</span> External references listed below</div></header>
       <article className="blog-article-content">
         <p className="blog-article-lead">{article.intro}</p>
         {article.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs?.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}</section>)}
         <section className="blog-source-list"><h2>Further reading</h2><p>These external resources provide additional general information. They do not replace individual medical advice.</p><ul>{article.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul></section>
-        <p className="blog-medical-note"><strong>Medical note:</strong> This article is general education, not a diagnosis or personal treatment recommendation. It is not a substitute for assessment by a qualified healthcare professional. Seek urgent medical care for severe or rapidly worsening symptoms.</p>
+        <p className="blog-medical-note"><strong>Medical note:</strong> This article is general education and is not presented as an individually reviewed clinical recommendation. It is not a diagnosis or personal treatment plan and cannot replace assessment by a qualified healthcare professional. Seek urgent medical care for severe or rapidly worsening symptoms.</p>
         <div className="blog-article-related"><h2>Related information</h2>{article.related.map((href) => <Link key={href} href={href}>{href === "/clinics" ? "Clinic locations" : href === "/contact" ? "Contact the clinic" : href === "/research" ? "Research and publications" : "Explore related information"} ↗</Link>)}</div>
       </article>
       <div className="blog-back-link"><Link href="/blog">← Back to all patient guides</Link></div>
