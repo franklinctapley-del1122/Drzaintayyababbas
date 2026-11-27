@@ -998,3 +998,10 @@ html body .doctor-reference-header .doctor-nav-row .nav-booking{background:#164b
 html body .doctor-reference-header .doctor-nav-row .nav-booking:hover{background:#079fd0!important}
 html body .doctor-reference-header .doctor-identity-monogram{border-color:#164b8e!important;color:#164b8e!important}
 html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079fd0!important;color:#079fd0!important}
+
+
+/* Align the About Dr section with the site's primary blue palette */
+.doctor-intro-showcase{border-bottom:3px solid #dce8f0!important}
+.doctor-intro-heading>span,.doctor-intro-heading h2 em,.doctor-about-column h3,.doctor-focus-mark,.doctor-experience-column .under-link{color:#123f79!important}
+.doctor-focus-mark{border-color:#dce8f0!important}
+.doctor-years{color:#123f79!important}
