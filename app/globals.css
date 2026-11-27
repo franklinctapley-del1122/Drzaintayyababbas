@@ -120,3 +120,22 @@ h1,h2,h3,p,a,strong{overflow-wrap:anywhere}
 .final-cta-inner p{font-size:13px;color:#c2d1ce}
 @media(max-width:900px){.approach-grid,.focus-grid{grid-template-columns:repeat(2,1fr)}.premium-specialty-grid{grid-template-columns:repeat(2,1fr)}.trust-row{grid-template-columns:repeat(2,1fr)}.split-feature{gap:40px}}
 @media(max-width:720px){.premium-hero{padding-top:43px;padding-bottom:48px}.premium-hero .photo-frame{height:min(112vw,470px)}.trust-row{grid-template-columns:1fr 1fr;gap:20px 12px}.trust-row strong{font-size:14px}.approach-grid,.focus-grid,.premium-specialty-grid,.experience-grid{grid-template-columns:1fr}.approach-grid article,.experience-grid>div{min-height:0;padding:23px}.split-feature,.visit-grid,.patient-note{grid-template-columns:1fr;gap:30px}.team-panel{padding:22px}.team-panel>div:not(.team-orbit){flex-direction:column;gap:3px}.team-panel span{text-align:left}.timeline>div{grid-template-columns:1fr;gap:5px;padding-left:20px}.final-cta-inner{align-items:flex-start;flex-direction:column;gap:20px}.final-cta-inner .button{width:100%}.premium-section-head h2{font-size:34px}.premium-final-cta{padding:48px 0}}
+
+/* Specialties directory card layout */
+.specialties-cards-section{padding-top:76px;padding-bottom:82px}
+.specialties-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.specialty-tile{display:flex;flex-direction:column;min-width:0;overflow:hidden;background:#fff;border:1px solid var(--line);transition:transform .22s ease,box-shadow .22s ease}
+.specialty-tile:hover{transform:translateY(-4px);box-shadow:0 18px 38px #102c3515}
+.specialty-tile-art{height:150px;position:relative;display:flex;align-items:flex-end;justify-content:space-between;padding:17px 20px;color:#fff;background:radial-gradient(circle at 78% 24%,#ffffff35 0,transparent 27%),linear-gradient(125deg,#102c35,#1b7773)}
+.specialty-tile:nth-child(3n + 2) .specialty-tile-art{background:radial-gradient(circle at 78% 24%,#ffffff35 0,transparent 27%),linear-gradient(125deg,#25454b,#527c70)}
+.specialty-tile:nth-child(3n) .specialty-tile-art{background:radial-gradient(circle at 78% 24%,#ffffff35 0,transparent 27%),linear-gradient(125deg,#344b56,#9b8057)}
+.specialty-tile-art span{font-size:10px;letter-spacing:2px;color:#f4dfb6}
+.specialty-tile-art i{font-style:normal;font-size:62px;line-height:.9;color:#ffffffb8;font-family:Georgia,serif}
+.specialty-tile-copy{display:flex;flex:1;flex-direction:column;padding:23px}
+.specialty-tile-copy h2{font-family:'Inter',Arial,sans-serif;font-size:21px;line-height:1.25;font-weight:600;margin:0 0 10px}
+.specialty-tile-copy p{font-size:12px;line-height:1.75;color:var(--muted);margin:0 0 20px}
+.specialty-tile-link{margin-top:auto;padding-top:13px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;color:var(--teal);font-size:11px;font-weight:700}
+.specialty-tile-link b{font-size:17px;font-weight:500}
+.specialties-cards-note{font-size:11px;color:#718080;line-height:1.7;margin:25px 0 0;max-width:850px}
+@media(max-width:950px){.specialties-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.specialties-cards-section{padding-top:55px;padding-bottom:60px}.specialties-card-grid{grid-template-columns:1fr;gap:15px}.specialty-tile-art{height:135px}.specialty-tile-copy{padding:21px}}
