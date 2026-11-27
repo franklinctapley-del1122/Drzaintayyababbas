@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import {Shell,CTA,wa} from "./components";
-import ExperienceCounter from "./components/ExperienceCounter";
 
 export const metadata={
   title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",
