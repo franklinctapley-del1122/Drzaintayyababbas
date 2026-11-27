@@ -51,7 +51,7 @@ export default function Specialties() {
   return (
     <Shell>
       <main>
-        <PageHero eyebrow="Clinical services" title="Surgical specialties in Lahore" lead="Explore Dr. Abbas’s documented background in surgical oncology and general surgery, alongside educational information about related conditions and referral pathways. The appropriate evaluation and management plan is determined individually after clinical assessment." />
+        <PageHero eyebrow="Consultation areas & patient education" title="Surgical consultations and patient information" lead="Explore Dr. Abbas’s CV-documented background in surgical oncology and general surgery, alongside educational guides to related conditions and referral pathways. The appropriate evaluation and management plan is determined individually after clinical assessment." />
         <section className="section section-white specialties-cards-section">
           <div className="container">
             <h2 className="specialties-directory-title">Areas of Specialty</h2>
