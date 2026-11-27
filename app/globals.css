@@ -1035,6 +1035,30 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 @media(max-width:600px){.trust-credentials-grid,.trust-clarity-grid{grid-template-columns:1fr}.trust-credentials-grid article,.trust-clarity-grid article{min-height:0}.trust-credentials-link{gap:12px;flex-direction:column;align-items:center}}
 
 
+
+/* Services carousel: clean single-card mobile slide and evenly spaced desktop cards */
+.cancer-services-slider{width:100%;overflow:hidden;padding:0 0 18px;position:relative}
+.cancer-services-track{display:flex;flex-wrap:nowrap;gap:0;width:200%;align-items:stretch;animation:services-slide 32s linear infinite;will-change:transform}
+.cancer-services-track>.cancer-service-card{box-sizing:border-box;flex:0 0 12.5%;width:12.5%;min-width:0;padding:0 12px 58px}
+.cancer-services-track .cancer-service-image{height:300px;border-radius:22px}
+.cancer-services-track .cancer-service-info{width:88%;min-height:140px;margin:-52px auto 0;padding:22px 14px 18px;border-radius:22px}
+@media(max-width:950px){
+ .cancer-services-track{width:400%}
+ .cancer-services-track>.cancer-service-card{padding-left:10px;padding-right:10px}
+ .cancer-services-track .cancer-service-image{height:270px}
+}
+@media(max-width:600px){
+ .cancer-services-section{overflow:hidden}
+ .cancer-services-heading{padding:0 8px}
+ .cancer-services-track{width:800%;animation-duration:36s}
+ .cancer-services-track>.cancer-service-card{flex:0 0 12.5%;width:12.5%;padding:0 10px 52px}
+ .cancer-services-track .cancer-service-image{height:230px;border-radius:20px}
+ .cancer-services-track .cancer-service-info{width:88%;min-height:112px;margin:-34px auto 0;padding:17px 12px 15px;border-radius:18px}
+ .cancer-services-track .cancer-service-info h3{font-size:16px;line-height:1.3;margin-bottom:14px}
+ .cancer-services-track .cancer-service-info>a{font-size:12px;padding:10px 19px}
+}
+@media(prefers-reduced-motion:reduce){.cancer-services-track{animation:none!important}}
+
 /* Subtle motion inspired by the supplied mobile website reference */
 @keyframes dza-fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes dza-soft-zoom{from{opacity:.65;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
