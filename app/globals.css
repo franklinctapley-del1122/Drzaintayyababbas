@@ -826,7 +826,13 @@ body{background:#fff;color:#172c43}
 .cancer-services-heading>span{display:block;color:#e56d12;font-size:14px;font-weight:750;letter-spacing:3px;margin-bottom:22px}
 .cancer-services-heading h2{font-size:clamp(34px,4vw,52px);line-height:1.25;letter-spacing:-1.2px;color:#383838;font-weight:750;margin:0 auto 12px;max-width:1050px}
 .cancer-services-heading p{font-size:16px;color:#64717b;margin:0}
-.cancer-services-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px;align-items:start}
+.cancer-services-slider{width:100%;overflow:hidden;padding:0 0 12px}
+.cancer-services-track{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:30px;width:200%;align-items:start;animation:services-slide 28s linear infinite}
+.cancer-services-slider:hover .cancer-services-track,.cancer-services-slider:focus-within .cancer-services-track{animation-play-state:paused}
+@keyframes services-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:950px){.cancer-services-track{width:400%;gap:22px}}
+@media(max-width:600px){.cancer-services-track{width:800%;gap:14px}}
+@media(prefers-reduced-motion:reduce){.cancer-services-track{animation:none;transform:none}}
 .cancer-service-card{position:relative;min-width:0;padding-bottom:58px}
 .cancer-service-image{height:335px;border-radius:30px;overflow:hidden;background:#edf0f1}
 .cancer-service-image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s}
@@ -838,7 +844,7 @@ body{background:#fff;color:#172c43}
 .cancer-service-info>a span{font-size:20px;line-height:12px}
 .cancer-services-action{text-align:center;margin-top:10px}
 .cancer-services-action>a{min-width:230px;padding:17px 30px;font-size:14px;text-transform:uppercase;letter-spacing:.3px}
-@media(max-width:950px){.cancer-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.cancer-service-image{height:300px}}
+@media(max-width:950px){.cancer-service-image{height:300px}}
 @media(max-width:600px){.cancer-services-section{padding:48px 0 42px}.cancer-services-heading{margin-bottom:32px}.cancer-services-heading>span{font-size:11px;letter-spacing:2px;margin-bottom:13px}.cancer-services-heading h2{font-size:31px}.cancer-services-heading p{font-size:14px}.cancer-services-grid{grid-template-columns:1fr;gap:16px}.cancer-service-card{max-width:420px;width:100%;margin:auto;padding-bottom:30px}.cancer-service-image{height:300px;border-radius:25px}.cancer-service-info{min-height:135px;margin-top:-48px;border-radius:25px}.cancer-service-info h3{font-size:19px;margin-bottom:15px}}
 
 
