@@ -499,16 +499,16 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             "acceptedAnswer":{"@type":"Answer","text":answer}
           }))
         })}} />
-        <section className="section">
+        <section className="section faq-section">
           <div className="container">
             <div className="eyebrow">Frequently asked questions</div>
             <h2>Common questions about {service.title.toLowerCase()}</h2>
-            <div className="related-grid">
+            <div className="faq-list">
               {service.faqs.map(([question, answer]) => (
-                <article className="related-card" key={question}>
-                  <h3>{question}</h3>
+                <details key={question}>
+                  <summary>{question}<span>＋</span></summary>
                   <p>{answer}</p>
-                </article>
+                </details>
               ))}
             </div>
           </div>
