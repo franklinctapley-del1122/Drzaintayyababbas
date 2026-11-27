@@ -26,26 +26,25 @@ const data = [
 ];
 
 function SpecialtyIcon({ index }: { index: number }) {
-  const common = { fill: "none", stroke: "currentColor", strokeWidth: 1.65, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
-  const artwork = [
-    <><path d="M32 8c-7 8-15 15-15 25a15 15 0 0 0 30 0C47 23 39 16 32 8Z"/><path d="M25 34c2-5 5-8 10-11"/></>,
-    <><path d="M32 8c-8 0-13 6-13 14 0 6 4 9 4 14 0 5 4 10 9 10s9-5 9-10c0-5 4-8 4-14 0-8-5-14-13-14Z"/><path d="M20 24c7-3 17-3 24 0M23 36c6-3 12-3 18 0M32 16v28"/></>,
-    <><path d="M18 13c-7 0-8 8-4 13-4 5-3 13 3 15-1 8 7 12 13 7l2-4 2 4c6 5 14 1 13-7 6-2 7-10 3-15 4-5 3-13-4-13-5 0-7 5-8 10h-12c-1-5-3-10-8-10Z"/><path d="M24 23v18M40 23v18M24 32h16"/></>,
-    <><path d="M18 21c-5-8 3-14 10-9l4 4 4-4c7-5 15 1 10 9-3 5-8 8-14 13-6-5-11-8-14-13Z"/><path d="M32 16v28M25 29h14"/></>,
-    <><path d="M17 14h30v36H17z"/><path d="M24 14v-5h16v5M23 24h18M23 32h18M23 40h12"/><circle cx="45" cy="45" r="5"/></>,
-    <><path d="M13 44 43 14M37 10l9 9M10 47l10-3-7-7Z"/><path d="M38 27a13 13 0 1 0 10 13"/><path d="M48 33v8h-8"/></>,
-    <><path d="M21 10c-5 5-7 12-7 20s2 15 7 20M43 10c5 5 7 12 7 20s-2 15-7 20"/><path d="M21 17c6 4 16 4 22 0M21 47c6-4 16-4 22 0M21 25c6 4 16 4 22 0M21 39c6-4 16-4 22 0"/></>,
-    <><path d="M32 8c-8 9-13 17-13 27a13 13 0 0 0 26 0c0-10-5-18-13-27Z"/><path d="M32 22v24M24 34h16"/></>,
-    <><path d="M32 10c-9 0-16 7-16 16 0 8 6 14 16 27 10-13 16-19 16-27 0-9-7-16-16-16Z"/><path d="M22 28c4-5 16-5 20 0M25 36c4-3 10-3 14 0"/></>,
-    <><path d="M20 11c-6 7-7 17-3 25l15 15 15-15c4-8 3-18-3-25"/><path d="M25 20h14M32 16v28M25 34h14"/></>,
-    <><path d="M32 8v48M8 32h48"/><path d="M20 20l24 24M44 20 20 44"/><circle cx="32" cy="32" r="19"/></>,
-    <><path d="M17 11c0 14 3 27 15 42 12-15 15-28 15-42"/><path d="M23 23h18M25 32h14M28 41h8"/></>,
-    <><path d="M12 42c7-2 11-10 15-10s7 5 10 5 7-3 15 5"/><path d="M18 21c4-7 9-10 14-10s10 3 14 10"/><path d="M32 32v20"/><circle cx="32" cy="32" r="4"/></>,
-    <><path d="M15 16h34v32H15z"/><path d="M22 16v-5h20v5M22 27h20M22 36h20"/><path d="M27 48v5M37 48v5"/></>,
-    <><path d="M18 18c-5 5-6 14-3 21 3 8 10 13 17 13s14-5 17-13c3-7 2-16-3-21"/><path d="M18 27c8-5 20-5 28 0M18 38c8-5 20-5 28 0"/><path d="M25 14h14"/></>
+  const icons = [
+    "",
+    "",
+    "/images/healthicons/colon.svg",
+    "/images/healthicons/thyroid.svg",
+    "/images/healthicons/general-surgery.svg",
+    "/images/healthicons/general-surgery.svg",
+    "/images/healthicons/stomach.svg",
+    "/images/healthicons/thyroid-cancer.svg",
+    "/images/healthicons/female-reproductive_system.svg",
+    "/images/healthicons/female-reproductive_system.svg",
+    "/images/healthicons/testicles.svg",
+    "/images/healthicons/oesophagus-cancer.svg",
+    "/images/healthicons/bone.svg",
+    "/images/healthicons/gallbladder.svg",
+    "/images/healthicons/body.svg"
   ];
-  if (index < 2) return null;
-  return <svg viewBox="0 0 64 64" role="img" aria-label={["", "", "Colon illustration", "Thyroid gland illustration", "Surgical assessment illustration", "Laparoscopic instrument illustration", "Stomach illustration", "Thyroid illustration", "Ovarian illustration", "Uterine illustration", "Testicular illustration", "Esophagus illustration", "Soft tissue illustration", "Gallbladder illustration", "Hernia illustration"][index]} {...common}>{artwork[index] || artwork[0]}</svg>;
+  if (!icons[index]) return null;
+  return <img src={icons[index]} alt="" aria-hidden="true" className="specialty-medical-icon" />;
 }
 
 export default function Specialties() {
