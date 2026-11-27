@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Shell, PageHero, CTA } from "../components";
 
 export const metadata = {
-  title: "Surgical Specialties in Lahore",
-  description: "Explore Dr. Zain Tayyab Abbas’s documented surgical oncology and general surgery background, alongside patient education on related conditions and referral pathways in Lahore.",
+  title: "Surgical Oncology & Endocrine Surgery in Lahore",
+  description: "Explore Surgical Oncology and Endocrine Surgery consultation information with Dr. Zain Tayyab Abbas in Lahore, plus patient guides for related conditions.",
   alternates: { canonical: "/specialties" }
 };
 
@@ -11,7 +11,7 @@ const data = [
   ["Surgical Oncology", "Consultation and surgical assessment for cancer-related conditions, with a focus on reviewing diagnosis, pathology, imaging and treatment planning.", "/specialties/surgical-oncology"],
   ["Breast Cancer Consultation", "Understand breast lump assessment, biopsy and pathology reports, breast cancer surgery discussions and lymph node assessment.", "/specialties/breast-cancer-consultation"],
   ["Colorectal Cancer Consultation", "Information about colorectal and gastrointestinal cancer investigations, pathology review and surgical consultation.", "/specialties/colorectal-cancer-consultation"],
-  ["Thyroid & Endocrine Information", "General educational information about thyroid and endocrine conditions, investigations and specialist referral.", "/specialties/endocrine-surgery"],
+  ["Endocrine Surgery", "Consultation information for selected thyroid and parathyroid conditions, based on individual assessment.", "/specialties/endocrine-surgery"],
   ["General Surgery", "Assessment information for abdominal, hernia, gallbladder, appendix and other general surgical concerns.", "/specialties/general-surgery"],
   ["Laparoscopic Surgery Information", "Patient education about minimally invasive approaches, including the importance of individual surgical assessment.", "/specialties/laparoscopic-surgery"],
   ["Gastric Cancer Information", "Understand stomach cancer investigations, biopsy, staging and treatment planning.", "/specialties/gastric-cancer-information"],
@@ -51,7 +51,7 @@ export default function Specialties() {
   return (
     <Shell>
       <main>
-        <PageHero eyebrow="Consultation areas & patient education" title="Surgical consultations and patient information" lead="Explore Dr. Abbas’s CV-documented background in surgical oncology and general surgery, alongside educational guides to related conditions and referral pathways. The appropriate evaluation and management plan is determined individually after clinical assessment." />
+        <PageHero eyebrow="Consultation areas & patient education" title="Surgical Oncology & Endocrine Surgery in Lahore" lead="Explore Dr. Zain Tayyab Abbas’s Surgical Oncology and Endocrine Surgery consultation areas in Lahore, alongside patient education on related conditions and referral pathways. The appropriate evaluation and management plan is determined individually after clinical assessment." />
         <section className="section section-white specialties-cards-section">
           <div className="container">
             <h2 className="specialties-directory-title">Areas of Specialty</h2>
