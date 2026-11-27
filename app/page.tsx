@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {Shell,CTA,wa} from "./components";
+import ExperienceCounter from "./components/ExperienceCounter";
 
 export const metadata={
   title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",
@@ -45,7 +46,7 @@ export default function Home(){
   <section className="doctor-intro-showcase"><div className="container">
     <div className="doctor-intro-heading"><span>DR. ZAIN TAYYAB ABBAS</span><p>MBBS, FCPS (General Surgery), Fellowship in Surgical Oncology</p><h2>Surgical Oncology <em>Specialist</em></h2></div>
     <div className="doctor-intro-grid">
-      <div className="doctor-experience-column"><strong className="doctor-years">10+</strong><h3>Years of Surgical Experience</h3><p>Dr. Zain Tayyab Abbas has worked across general surgery and surgical oncology roles in leading hospitals in Lahore, with experience in patient assessment, operative care and post-operative management.</p><Link className="under-link" href="/about">View professional profile ↗</Link></div>
+      <div className="doctor-experience-column"><ExperienceCounter/><h3>Years of Surgical Experience</h3><p>Dr. Zain Tayyab Abbas has worked across general surgery and surgical oncology roles in leading hospitals in Lahore, with experience in patient assessment, operative care and post-operative management.</p><Link className="under-link" href="/about">View professional profile ↗</Link></div>
       <div className="doctor-portrait"><Image src="/images/dr-zain-tayyab-abbas-main.webp" alt="Dr. Zain Tayyab Abbas" fill sizes="(max-width: 800px) 90vw, 28vw" style={{objectFit:"cover",objectPosition:"center 20%"}}/></div>
       <div className="doctor-about-column"><h3>ABOUT DR. ZAIN TAYYAB ABBAS</h3><p>Dr. Zain Tayyab Abbas is a surgeon with a Fellowship in Surgical Oncology from Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre, Lahore. His clinical background includes surgical oncology and general surgery, with experience in breast, gastrointestinal and hepatobiliary malignancies.</p><p>He currently serves as Senior Registrar, Surgical Unit 1, Jinnah Hospital Lahore. Consultations cover surgical oncology and endocrine surgery.</p><div className="doctor-focus-mark"><span>✚</span><b>SURGICAL ONCOLOGY</b><small>ENDOCRINE SURGERY · LAHORE</small></div></div>
     </div>
