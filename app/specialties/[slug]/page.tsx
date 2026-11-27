@@ -353,7 +353,7 @@ const services: Record<string, Service> = {
     title: "Gallbladder Surgery Information",
     short: "Patient information about gallstones, gallbladder symptoms and surgical assessment",
     intro: "Gallstones may cause no symptoms or lead to episodes of pain and complications such as inflammation. A surgical assessment reviews symptoms, ultrasound findings and blood tests before discussing whether an operation is appropriate.",
-    context: "Dr. Zain Tayyab Abbas's CV documents experience in cholecystectomy and laparoscopic surgery. The approach and timing of any operation depend on the patient's diagnosis, risks and clinical findings.",
+    context: "Dr. Zain Tayyab Abbas's CV lists cholecystectomy among his surgical skills and records a hands-on workshop on safe laparoscopic cholecystectomy. The CV also lists presentations involving laparoscopic procedures. This background should not be read as a separate fellowship qualification; the approach and timing of any operation depend on the patient's diagnosis, risks and clinical findings.",
     topics: [
       ["Gallstones and symptoms", "Gallstones can cause pain in the upper abdomen, often after meals, but abdominal pain has many possible causes. Severe or persistent pain, fever or jaundice needs urgent medical assessment."],
       ["Ultrasound and blood tests", "Ultrasound is commonly used to identify gallstones and assess the gallbladder. Blood tests may be needed when inflammation or bile duct problems are suspected."],
@@ -413,8 +413,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const educationalOnly = slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery";
   if (!service) return { title: "Surgical Consultation in Lahore" };
   return {
-    title: service.title + " Consultation in Lahore",
-    description: service.short + ". Learn about assessment, relevant clinical background, appointment preparation and frequently asked questions.",
+    title: service.title + (slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery" ? " | Patient Information" : " Consultation in Lahore"),
+    description: service.short + ". Learn about assessment, relevant clinical context, preparation and questions to discuss with an appropriate healthcare professional.",
     alternates: { canonical: "/specialties/" + slug }
   };
 }
@@ -438,7 +438,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   return (
     <Shell>
       <main>
-        <PageHero eyebrow="Clinical consultation · Lahore" title={service.title + " in Lahore"} lead={service.intro} />
+        <PageHero eyebrow={educationalOnly ? "Patient information · Lahore" : "Clinical consultation · Lahore"} title={service.title + (educationalOnly ? "" : " in Lahore")} lead={service.intro} />
         <section className="section section-white">
           <div className="container content-grid">
             <article className="prose">
