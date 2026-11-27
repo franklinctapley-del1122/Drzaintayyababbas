@@ -1033,3 +1033,21 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 .trust-clarity-note{max-width:850px;margin:24px auto 0;text-align:center;color:#617286;font-size:13px;line-height:1.7}
 @media(max-width:900px){.trust-credentials-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.trust-credentials-grid,.trust-clarity-grid{grid-template-columns:1fr}.trust-credentials-grid article,.trust-clarity-grid article{min-height:0}.trust-credentials-link{gap:12px;flex-direction:column;align-items:center}}
+
+
+/* Subtle motion inspired by the supplied mobile website reference */
+@keyframes dza-fade-up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes dza-soft-zoom{from{opacity:.65;transform:scale(1.035)}to{opacity:1;transform:scale(1)}}
+.reference-hero .hero-copy{animation:dza-fade-up .85s ease-out both}
+.cancer-services-heading{animation:dza-fade-up .7s ease-out both}
+.cancer-service-card{animation:dza-fade-up .8s ease-out both}
+.cancer-service-image img{transition:transform .55s ease,filter .55s ease}
+.cancer-service-card:hover .cancer-service-image img{transform:scale(1.07);filter:saturate(1.08)}
+.trust-credentials-grid article,.approach-grid article,.trust-clarity-grid article,.clinic-card,.home-blog-card{transition:transform .35s ease,box-shadow .35s ease}
+.trust-credentials-grid article:hover,.approach-grid article:hover,.trust-clarity-grid article:hover,.clinic-card:hover,.home-blog-card:hover{transform:translateY(-6px);box-shadow:0 18px 38px #15375d18}
+@supports (animation-timeline:view()){
+  .trust-credentials-grid article,.approach-grid article,.trust-clarity-grid article,.clinic-card,.home-blog-card,.faq-list details{animation:dza-fade-up linear both;animation-timeline:view();animation-range:entry 0% entry 28%}
+}
+@media(prefers-reduced-motion:reduce){
+  .reference-hero .hero-copy,.cancer-services-heading,.cancer-service-card,.trust-credentials-grid article,.approach-grid article,.trust-clarity-grid article,.clinic-card,.home-blog-card{animation:none!important;transition:none!important}
+}
