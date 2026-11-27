@@ -154,3 +154,9 @@ h1,h2,h3,p,a,strong{overflow-wrap:anywhere}
   background-size:cover;
   background-position:center;
 }
+
+
+/* Specialty card SVG illustrations */
+.specialty-tile-art svg{width:68px;height:68px;color:#ffffffd9;filter:drop-shadow(0 3px 8px #102c3540)}
+.specialty-tile-art span{position:relative;z-index:1}
+@media(max-width:620px){.specialty-tile-art svg{width:60px;height:60px}}
