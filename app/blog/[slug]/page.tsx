@@ -120,6 +120,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     <div className="container blog-article-wrap">
       <nav className="blog-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/blog">Blog</Link><span>/</span><span>{article.category}</span></nav>
       <header className="blog-article-header"><span className="eyebrow">{article.category} · PATIENT EDUCATION</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="blog-article-byline">Professional profile: <Link href="/about">Dr. Zain Tayyab Abbas</Link> <span>•</span> General patient education <span>•</span> External references listed below</div></header>
+      {slug === "prepare-for-surgical-consultation" && <h2>Under Development</h2>}
       <article className="blog-article-content">
         <p className="blog-article-lead">{article.intro}</p>
         {article.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs?.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}</section>)}
