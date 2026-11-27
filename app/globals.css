@@ -257,3 +257,15 @@ h1,h2,h3,p,a,strong{overflow-wrap:anywhere}
 @media(max-width:950px){.home-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.home-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.home-topic-tile{min-height:190px}.home-topic-art{height:98px}.home-topic-art img{width:68px;height:68px}.home-topic-copy{padding:0 8px 14px}.home-topic-copy h3{font-size:14px}.home-topic-copy p{font-size:10px}}
 @media(max-width:380px){.home-topic-grid{grid-template-columns:1fr}}
+
+
+/* Consultation experience — refined four-step process cards */
+.premium-approach .approach-grid{gap:18px;counter-reset:consult-step}
+.premium-approach .approach-grid article{position:relative;overflow:hidden;min-height:228px;padding:29px 25px 25px;background:linear-gradient(150deg,#fff 0%,#f8faf8 100%);border:1px solid #e3eae5;border-radius:12px;box-shadow:0 9px 24px #173b350d;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.premium-approach .approach-grid article:hover{transform:translateY(-5px);border-color:#c9d9cf;box-shadow:0 16px 32px #173b3518}
+.premium-approach .approach-grid article>span{display:inline-flex;width:46px;height:46px;align-items:center;justify-content:center;border-radius:50%;background:#f8edda;border:1px solid #ecd7b2;color:#a77d3f;font-size:14px;letter-spacing:1px;font-weight:700}
+.premium-approach .approach-grid article h3{font-size:19px;line-height:1.25;margin:22px 0 9px;color:#173b35}
+.premium-approach .approach-grid article p{font-size:12px;line-height:1.75;color:#667779;margin:0}
+.premium-approach .approach-grid article:after{content:"";position:absolute;right:-30px;bottom:-42px;width:110px;height:110px;border:1px solid #dce9e0;border-radius:50%;box-shadow:0 0 0 14px #edf3ee55,0 0 0 28px #edf3ee33;pointer-events:none}
+.premium-approach .premium-section-head{margin-bottom:39px}
+@media(max-width:720px){.premium-approach .approach-grid{gap:13px}.premium-approach .approach-grid article{min-height:195px;padding:22px 19px}.premium-approach .approach-grid article h3{font-size:17px;margin-top:17px}.premium-approach .approach-grid article>span{width:40px;height:40px}}
