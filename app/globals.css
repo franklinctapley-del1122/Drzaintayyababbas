@@ -633,3 +633,31 @@ body{background:#fff;color:#172c43}
 .precision-feature-copy .button{background:#164b8e;border-radius:4px}
 @media(max-width:800px){.treatment-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.precision-feature-grid{grid-template-columns:1fr;gap:32px}.precision-feature-art{height:360px}}
 @media(max-width:600px){.treatment-showcase{padding:52px 0}.treatment-showcase-head{align-items:flex-start;flex-direction:column}.treatment-view-all{width:100%}.treatment-card-grid{grid-template-columns:1fr;gap:13px}.treatment-card-image{height:155px}.treatment-card-image img{width:84px;height:84px}.treatment-card-label{padding:14px}.treatment-card-label h3{font-size:15px}.precision-feature{padding:54px 0}.precision-feature-art{height:310px}.precision-feature-copy h2{font-size:34px}}
+
+
+/* Reference layout refinement: photo-led treatment cards, six benefit tiles and gallery */
+.trust-row{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}
+.trust-row>div{min-height:150px;padding:22px 14px 18px!important;border:1px solid #dce8ef!important;border-radius:14px;background:#fff;display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center;box-shadow:0 8px 24px #123f790b}
+.trust-row>div>b{width:48px;height:48px;border:1px solid #c7dce8;border-radius:50%;display:grid;place-items:center;background:#edf5f8;color:#147b9b;font-size:21px;margin-bottom:13px}
+.trust-row>div>strong{font-size:12px;color:#17375e;line-height:1.35}
+.trust-row>div>span{font-size:10px;color:#6b7e8e;line-height:1.45;margin-top:5px}
+.treatment-showcase{background:#eef5ef}
+.treatment-card{border-radius:12px}
+.treatment-card-image{height:220px;display:block;overflow:hidden;background:#e6eef1}
+.treatment-card-image img{display:block;width:100%;height:100%;object-fit:cover;filter:none;transition:transform .45s ease}
+.treatment-card:hover .treatment-card-image img{transform:scale(1.045)}
+.treatment-card-image:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#0c2e4d45);pointer-events:none}
+.treatment-card-label{min-height:62px;padding:12px 15px;background:#fff}
+.treatment-card-label h3{font-size:14px;margin:0;color:#1b4c78}
+.treatment-card-label p{display:none}
+.treatment-card-label>b{width:38px;height:38px;flex-basis:38px;font-size:25px;background:#1b4c78}
+.clinical-gallery{background:#fff;padding:82px 0 90px}
+.clinical-gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
+.clinical-gallery-heading h2{font-size:clamp(30px,3.7vw,44px);line-height:1.15;color:#15375d;margin:10px 0 0}
+.gallery-button{background:#1b4c78;white-space:nowrap}
+.clinical-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.clinical-gallery-grid figure{height:235px;margin:0;overflow:hidden;border-radius:10px;background:#eaf0f3;box-shadow:0 10px 28px #15375d12}
+.clinical-gallery-grid img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}
+.clinical-gallery-grid figure:hover img{transform:scale(1.05)}
+@media(max-width:900px){.trust-row{grid-template-columns:repeat(3,minmax(0,1fr))}.clinical-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.trust-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.trust-row>div{min-height:135px}.treatment-card-image{height:190px}.clinical-gallery{padding:55px 0}.clinical-gallery-heading{align-items:flex-start;flex-direction:column}.gallery-button{width:100%}.clinical-gallery-grid{grid-template-columns:1fr 1fr;gap:11px}.clinical-gallery-grid figure{height:155px}}
