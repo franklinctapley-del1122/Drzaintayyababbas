@@ -1104,3 +1104,14 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
  .mobile-menu-backdrop.is-open{display:block!important;position:fixed!important;inset:0!important;background:#0008!important;z-index:200!important}
  html body .doctor-reference-header .doctor-nav-row .nav-booking{position:absolute!important;right:64px!important;top:58px!important;min-height:40px!important;padding:8px 12px!important;font-size:11px!important;z-index:99!important}
 }
+
+
+/* Homepage featured blog carousel */
+.home-blog-carousel{width:100%;overflow:hidden;padding:0 0 16px}
+.home-blog-track{display:flex;flex-wrap:nowrap;align-items:stretch;width:200%;animation:home-blogs-slide 34s linear infinite;will-change:transform}
+.home-blog-carousel:hover .home-blog-track,.home-blog-carousel:focus-within .home-blog-track{animation-play-state:paused}
+.home-blog-track>.home-blog-card{box-sizing:border-box;flex:0 0 16.6667%;width:16.6667%;min-width:0;padding:0 12px 12px}
+@keyframes home-blogs-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:950px){.home-blog-track{width:300%}.home-blog-track>.home-blog-card{flex-basis:16.6667%;width:16.6667%;padding-left:9px;padding-right:9px}}
+@media(max-width:600px){.home-blog-track{width:600%;animation-duration:38s}.home-blog-track>.home-blog-card{flex-basis:16.6667%;width:16.6667%;padding:0 9px 10px}.home-blog-card{height:100%}}
+@media(prefers-reduced-motion:reduce){.home-blog-track{animation:none!important}}
