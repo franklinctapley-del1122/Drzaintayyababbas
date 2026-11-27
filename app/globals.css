@@ -840,3 +840,54 @@ body{background:#fff;color:#172c43}
 .cancer-services-action>a{min-width:230px;padding:17px 30px;font-size:14px;text-transform:uppercase;letter-spacing:.3px}
 @media(max-width:950px){.cancer-services-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}.cancer-service-image{height:300px}}
 @media(max-width:600px){.cancer-services-section{padding:48px 0 42px}.cancer-services-heading{margin-bottom:32px}.cancer-services-heading>span{font-size:11px;letter-spacing:2px;margin-bottom:13px}.cancer-services-heading h2{font-size:31px}.cancer-services-heading p{font-size:14px}.cancer-services-grid{grid-template-columns:1fr;gap:16px}.cancer-service-card{max-width:420px;width:100%;margin:auto;padding-bottom:30px}.cancer-service-image{height:300px;border-radius:25px}.cancer-service-info{min-height:135px;margin-top:-48px;border-radius:25px}.cancer-service-info h3{font-size:19px;margin-bottom:15px}}
+
+
+/* Three-tier header inspired by the supplied Dr Tanveer reference */
+.doctor-reference-header{position:relative;background:#fff;box-shadow:none;border:0;z-index:50}
+.doctor-topbar{height:52px;background:#1b4b91;color:#fff}
+.doctor-topbar-inner{height:100%;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:650}
+.doctor-topbar-inner a{color:#fff;text-decoration:none;white-space:nowrap}
+.doctor-topbar-inner a:first-child:before{content:"☎";color:#09a8dc;margin-right:8px}
+.doctor-topbar-inner a:last-child:before{content:"✉";color:#09a8dc;margin-right:8px}
+.doctor-topbar-separator{opacity:.8}
+.doctor-identity-row{background:#fff}
+.doctor-identity-inner{min-height:164px;display:flex;align-items:center;gap:48px}
+.doctor-identity-brand{display:flex;align-items:center;gap:16px;text-decoration:none;margin-right:auto;min-width:0}
+.doctor-identity-monogram{width:58px;height:66px;display:grid;place-items:center;border-right:5px solid #1b4b91;color:#1b4b91;font-size:34px;font-weight:850;letter-spacing:-3px}
+.doctor-identity-copy{display:flex;flex-direction:column;gap:4px}
+.doctor-identity-copy strong{font-size:35px;line-height:1.12;color:#1b4b91;font-weight:800;white-space:nowrap}
+.doctor-identity-copy small,.doctor-identity-copy em{font-size:13px;line-height:1.25;color:#079fd0;font-style:normal}
+.doctor-header-contact,.doctor-header-hours{display:flex;align-items:center;gap:15px;flex:0 0 auto}
+.doctor-header-contact-icon{width:42px;height:42px;border:1.5px solid #079fd0;border-radius:50%;display:grid;place-items:center;color:#079fd0;font-size:25px}
+.doctor-header-contact small,.doctor-header-hours small{display:block;color:#687585;font-size:13px;margin-bottom:6px}
+.doctor-header-contact a,.doctor-header-hours strong{display:block;color:#141c26;text-decoration:none;font-size:16px;font-weight:550;white-space:nowrap}
+.doctor-header-hours span{display:block;color:#667789;font-size:11px;margin-top:4px;white-space:nowrap}
+.doctor-nav-row{background:#f7f7f7}
+.doctor-nav-row .nav{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.doctor-nav-row nav{display:flex;align-items:center;gap:clamp(18px,3vw,42px);flex:1;justify-content:flex-start}
+.doctor-nav-row nav>a,.doctor-nav-row .nav-dropdown-trigger{color:#101820;text-decoration:none;font-size:15px;font-weight:650;white-space:nowrap}
+.doctor-nav-row nav>a:hover,.doctor-nav-row .nav-dropdown-trigger:hover{color:#079fd0}
+.doctor-nav-row .nav-booking{background:#1b4b91;color:#fff;border-radius:4px;min-width:190px;text-align:center;padding:16px 22px;font-weight:700;white-space:nowrap}
+.doctor-nav-row .mobile-menu-toggle{display:none}
+@media(max-width:1050px){.doctor-identity-inner{gap:22px}.doctor-identity-copy strong{font-size:29px}.doctor-header-hours span{white-space:normal;max-width:180px}.doctor-nav-row nav{gap:16px}.doctor-nav-row nav>a,.doctor-nav-row .nav-dropdown-trigger{font-size:13px}.doctor-nav-row .nav-booking{min-width:165px}}
+@media(max-width:760px){
+ .doctor-topbar{height:42px}.doctor-topbar-inner{font-size:11px;gap:7px}
+ .doctor-identity-inner{min-height:auto;padding-top:17px;padding-bottom:17px;flex-wrap:wrap;gap:15px}
+ .doctor-identity-brand{width:100%;gap:12px}
+ .doctor-identity-monogram{width:45px;height:52px;font-size:28px}
+ .doctor-identity-copy strong{font-size:24px}
+ .doctor-identity-copy small,.doctor-identity-copy em{font-size:11px}
+ .doctor-header-contact,.doctor-header-hours{flex:1 1 44%;gap:8px}
+ .doctor-header-contact-icon{width:32px;height:32px;font-size:19px}
+ .doctor-header-contact small,.doctor-header-hours small{font-size:11px;margin-bottom:3px}
+ .doctor-header-contact a,.doctor-header-hours strong{font-size:12px;white-space:normal}
+ .doctor-header-hours span{font-size:10px;white-space:normal}
+ .doctor-nav-row .nav{min-height:54px;position:relative;justify-content:space-between;gap:10px}
+ .doctor-nav-row .mobile-menu-toggle{display:flex;flex-direction:column;gap:5px;border:0;background:transparent;padding:10px}
+ .doctor-nav-row .mobile-menu-toggle span{width:23px;height:2px;background:#1b4b91}
+ .doctor-nav-row nav{display:none;position:absolute;left:0;right:0;top:54px;background:#fff;box-shadow:0 12px 22px #0002;padding:14px 20px;z-index:80;align-items:stretch;flex-direction:column;gap:0}
+ .doctor-nav-row nav.is-open{display:flex}
+ .doctor-nav-row nav>a,.doctor-nav-row .nav-dropdown-trigger{display:block;padding:11px 0;font-size:14px}
+ .doctor-nav-row .nav-dropdown{width:100%}
+ .doctor-nav-row .nav-booking{min-width:0;padding:12px 18px;font-size:12px}
+}
