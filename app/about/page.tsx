@@ -104,7 +104,7 @@ export default function About() {
             <div><div className="eyebrow">For patients</div><h2>Preparing for your consultation</h2></div>
             <div>
               <p>Patients may bring previous medical records, consultation notes, biopsy or pathology reports, laboratory results, imaging and a current list of medicines. These records help the treating team understand the medical history and discuss appropriate next steps.</p>
-              <p className="small-note">This website provides general information and does not replace an individual medical assessment or consultation.</p>
+              <p className="small-note">Professional qualifications, roles and experience on this page are summarised from the CV supplied for this profile. Clinic schedules and appointment availability can change; confirm details with the clinic. This website provides general information and does not replace an individual medical assessment or consultation.</p>
               <Link className="under-link" href="/specialties">Explore areas of consultation ↗</Link>
             </div>
           </div>
