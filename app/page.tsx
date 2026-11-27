@@ -65,11 +65,20 @@ export default function Home(){
   {/* Cancer care services */}
   <section className="cancer-services-section"><div className="container">
     <div className="cancer-services-heading"><span>CONSULTATION AREAS</span><h2>Cancer Care &amp; Surgical Services</h2><p>Explore specialist consultation information for common surgical oncology and endocrine concerns.</p></div>
-    <div className="cancer-services-grid">
-      <article className="cancer-service-card"><div className="cancer-service-image"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85" alt="Breast health consultation"/></div><div className="cancer-service-info"><h3>Breast Cancer Consultation</h3><Link href="/specialties/breast-cancer-consultation">Learn more <span>→</span></Link></div></article>
-      <article className="cancer-service-card"><div className="cancer-service-image"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85" alt="Thyroid and neck health consultation"/></div><div className="cancer-service-info"><h3>Thyroid &amp; Endocrine Surgery</h3><Link href="/specialties/endocrine-surgery">Learn more <span>→</span></Link></div></article>
-      <article className="cancer-service-card"><div className="cancer-service-image"><img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85" alt="Gastrointestinal health consultation"/></div><div className="cancer-service-info"><h3>Gastrointestinal Cancer Care</h3><Link href="/specialties/gastric-cancer-information">Learn more <span>→</span></Link></div></article>
-      <article className="cancer-service-card"><div className="cancer-service-image"><img src="https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85" alt="Surgical oncology consultation"/></div><div className="cancer-service-info"><h3>Surgical Oncology</h3><Link href="/specialties/surgical-oncology">Learn more <span>→</span></Link></div></article>
+    <div className="cancer-services-slider" aria-label="Surgical services carousel">
+      <div className="cancer-services-track">
+        {[
+          {title:"Breast Cancer Consultation",href:"/specialties/breast-cancer-consultation",src:"https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85",alt:"Breast health consultation"},
+          {title:"Thyroid & Endocrine Surgery",href:"/specialties/endocrine-surgery",src:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85",alt:"Thyroid and neck health consultation"},
+          {title:"Gastrointestinal Cancer Care",href:"/specialties/gastric-cancer-information",src:"https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85",alt:"Gastrointestinal health consultation"},
+          {title:"Surgical Oncology",href:"/specialties/surgical-oncology",src:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85",alt:"Surgical oncology consultation"}
+        ].concat([
+          {title:"Breast Cancer Consultation",href:"/specialties/breast-cancer-consultation",src:"https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85",alt:"Breast health consultation"},
+          {title:"Thyroid & Endocrine Surgery",href:"/specialties/endocrine-surgery",src:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85",alt:"Thyroid and neck health consultation"},
+          {title:"Gastrointestinal Cancer Care",href:"/specialties/gastric-cancer-information",src:"https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85",alt:"Gastrointestinal health consultation"},
+          {title:"Surgical Oncology",href:"/specialties/surgical-oncology",src:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85",alt:"Surgical oncology consultation"}
+        ]).map((item,index)=><article className="cancer-service-card" key={index} aria-hidden={index>=4 ? true : undefined}><div className="cancer-service-image"><img src={item.src} alt={index>=4 ? "" : item.alt} loading="lazy"/></div><div className="cancer-service-info"><h3>{item.title}</h3><Link href={item.href} tabIndex={index>=4 ? -1 : undefined}>Learn more <span>→</span></Link></div></article>)}
+      </div>
     </div>
     <div className="cancer-services-action"><Link href="/specialties">View All Services</Link></div>
   </div></section>
