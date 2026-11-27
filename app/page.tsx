@@ -46,7 +46,7 @@ export default function Home(){
   <section className="doctor-intro-showcase"><div className="container">
     <div className="doctor-intro-heading"><span>DR. ZAIN TAYYAB ABBAS</span><p>MBBS, FCPS (General Surgery), Fellowship in Surgical Oncology</p><h2>Surgical Oncology <em>Specialist</em></h2></div>
     <div className="doctor-intro-grid">
-      <div className="doctor-experience-column"><ExperienceCounter/><h3>Years of Surgical Experience</h3><p>Dr. Zain Tayyab Abbas has worked across general surgery and surgical oncology roles in leading hospitals in Lahore, with experience in patient assessment, operative care and post-operative management.</p><Link className="under-link" href="/about">View professional profile ↗</Link></div>
+      <div className="doctor-experience-column"><span className="experience-kicker">CLINICAL BACKGROUND</span><h3>Professional experience in surgical care</h3><p>Dr. Zain Tayyab Abbas has worked across general surgery and surgical oncology roles in Lahore, with experience in patient assessment, operative care and post-operative management.</p><Link className="under-link" href="/about">View professional profile ↗</Link></div>
       <div className="doctor-portrait"><Image src="/images/dr-zain-tayyab-abbas-main.webp" alt="Dr. Zain Tayyab Abbas" fill sizes="(max-width: 800px) 90vw, 28vw" style={{objectFit:"cover",objectPosition:"center 20%"}}/></div>
       <div className="doctor-about-column"><h3>ABOUT DR. ZAIN TAYYAB ABBAS</h3><p>Dr. Zain Tayyab Abbas is a surgeon with a Fellowship in Surgical Oncology from Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre, Lahore. His clinical background includes surgical oncology and general surgery, with experience in breast, gastrointestinal and hepatobiliary malignancies.</p><p>He currently serves as Senior Registrar, Surgical Unit 1, Jinnah Hospital Lahore. Consultations cover surgical oncology and endocrine surgery.</p><div className="doctor-focus-mark"><span>✚</span><b>SURGICAL ONCOLOGY</b><small>ENDOCRINE SURGERY · LAHORE</small></div></div>
     </div>
@@ -61,6 +61,16 @@ export default function Home(){
       <article><span className="trust-card-index">04 · CURRENT APPOINTMENT</span><h3>Senior Registrar</h3><p>Surgical Unit 1, Jinnah Hospital, Lahore. Listed from July 2025 in the professional profile.</p></article>
     </div>
     <div className="trust-credentials-link"><Link className="under-link" href="/about">View full qualifications & career history ↗</Link><Link className="under-link" href="/research">Explore research & academic work ↗</Link></div>
+  </div></section>
+  {/* Modern trust section */}
+  <section className="section why-choose-section"><div className="container">
+    <div className="why-choose-heading"><div className="eyebrow">Why patients consult Dr. Zain</div><h2>Clear guidance, grounded in your individual needs</h2><p>A specialist consultation should help you understand your reports, the questions to ask and the next steps that may be appropriate for your situation.</p></div>
+    <div className="why-choose-grid">
+      <article><span>01</span><h3>Specialist surgical training</h3><p>MBBS, FCPS in General Surgery and Fellowship training in Surgical Oncology.</p></article>
+      <article><span>02</span><h3>Careful review of reports</h3><p>Time to discuss relevant imaging, pathology, laboratory results and medical history.</p></article>
+      <article><span>03</span><h3>Understand your options</h3><p>Clear discussion of possible approaches, referrals and when a multidisciplinary opinion may help.</p></article>
+      <article><span>04</span><h3>Practical next steps</h3><p>Guidance on follow-up, further assessment and preparing for your next appointment.</p></article>
+    </div>
   </div></section>
   {/* Cancer care services */}
   <section className="cancer-services-section"><div className="container">
@@ -84,14 +94,18 @@ export default function Home(){
   </div></section>
   {/* 05 */}
   <section className="section premium-approach"><div className="container"><SectionHead kicker="The consultation experience" title="A considered approach to every patient" desc="A clear consultation helps patients understand the next step without unrealistic promises or unnecessary confusion."/><div className="approach-grid"><article><span>01</span><h3>Listen & understand</h3><p>Discuss symptoms, medical history, concerns and the reason for referral.</p></article><article><span>02</span><h3>Review the evidence</h3><p>Consider available examination findings, imaging, pathology and laboratory reports.</p></article><article><span>03</span><h3>Explain options</h3><p>Discuss appropriate next steps, possible approaches and when another specialist is needed.</p></article><article><span>04</span><h3>Plan follow-up</h3><p>Clarify the recommended follow-up and what information the patient should keep.</p></article></div></div></section>
-  <section className="section trust-clarity-section"><div className="container">
-    <div className="trust-clarity-heading"><div className="eyebrow">A clear and considered consultation</div><h2>Understand the next step in your care</h2><p>Every patient’s situation is different. A consultation is an opportunity to review the available information and discuss appropriate next steps.</p></div>
-    <div className="trust-clarity-grid">
-      <article><span>01</span><h3>Review your records</h3><p>Previous reports, imaging, biopsy results and medical history help inform the discussion.</p></article>
-      <article><span>02</span><h3>Discuss your options</h3><p>Understand the findings, possible approaches, and when input from another specialist may be needed.</p></article>
-      <article><span>03</span><h3>Agree on next steps</h3><p>Clarify recommended investigations, referrals or follow-up based on your individual assessment.</p></article>
+  {/* Patient feedback carousel: quotations are attributed to their original platforms */}
+  <section className="section patient-reviews-section"><div className="container">
+    <div className="patient-reviews-heading"><div><div className="eyebrow">Patient feedback</div><h2>Experiences shared by patients</h2><p>Feedback published on independent healthcare platforms. Each quotation remains attributed to its original source.</p></div><a className="reviews-google-link" href="https://maps.app.goo.gl/REsnshfnPAKV1tGa8" target="_blank" rel="noopener noreferrer">View Google reviews ↗</a></div>
+    <div className="patient-review-window" aria-label="Patient feedback carousel">
+      <div className="patient-review-track">
+        <article className="patient-review-card"><div className="review-card-top"><span className="review-source">OLADOC · VERIFIED PATIENT</span><span className="review-stars" aria-label="Five stars">★★★★★</span></div><blockquote>“He nice, caring and explaining each and every question.”</blockquote><div className="review-card-bottom"><span>Published patient feedback</span><a href="https://oladoc.com/pakistan/lahore/dr/laparoscopic-surgeon/zain-tayyab-abbas/939412" target="_blank" rel="noopener noreferrer">Read on oladoc ↗</a></div></article>
+        <article className="patient-review-card"><div className="review-card-top"><span className="review-source">MARHAM · PATIENT REVIEW</span><span className="review-stars" aria-label="Five out of five">★★★★★</span></div><blockquote>“I am satisfied with the doctor.”</blockquote><div className="review-card-bottom"><span>Patient feedback · Iqra Medical Complex</span><a href="https://www.marham.pk/doctors/lahore/general-surgeon/asst-prof-dr-zain-tayyab-abbas/reviews" target="_blank" rel="noopener noreferrer">Read on Marham ↗</a></div></article>
+        <article className="patient-review-card"><div className="review-card-top"><span className="review-source">OLADOC · VERIFIED PATIENT</span><span className="review-stars" aria-label="Five stars">★★★★★</span></div><blockquote>“He nice, caring and explaining each and every question.”</blockquote><div className="review-card-bottom"><span>Published patient feedback</span><a href="https://oladoc.com/pakistan/lahore/dr/laparoscopic-surgeon/zain-tayyab-abbas/939412" target="_blank" rel="noopener noreferrer">Read on oladoc ↗</a></div></article>
+        <article className="patient-review-card" aria-hidden="true"><div className="review-card-top"><span className="review-source">MARHAM · PATIENT REVIEW</span><span className="review-stars">★★★★★</span></div><blockquote>“I am satisfied with the doctor.”</blockquote><div className="review-card-bottom"><span>Patient feedback · Iqra Medical Complex</span><span>Read on Marham ↗</span></div></article>
+      </div>
     </div>
-    <p className="trust-clarity-note">No website can guarantee a treatment outcome or replace an in-person medical assessment. If you have urgent or severe symptoms, seek timely medical attention.</p>
+    <p className="reviews-disclaimer">Reviews are reproduced as brief excerpts from their respective platforms and are not a guarantee of treatment outcomes. Google feedback can be viewed directly through the Google listing.</p>
   </div></section>
   {/* 12 */}
   <section className="section clinic-section"><div className="container"><div className="section-heading"><div><div className="eyebrow">Visit the clinics</div><h2>Consultations in Lahore</h2></div><Link className="under-link" href="/clinics">Full clinic details ↗</Link></div><div className="clinic-grid"><article className="clinic-card premium-clinic"><span className="clinic-index">01 · JOHAR TOWN</span><h3>Iqraa Medical Complex</h3><p>New Building, Extension, Block A, Phase 1, Johar Town, Lahore, Pakistan.</p><strong>Monday – Saturday · 5:00 PM – 8:00 PM</strong></article><article className="clinic-card premium-clinic"><span className="clinic-index">02 · VALENCIA TOWN</span><h3>Tayyab Medical & Dental Complex</h3><p>Valencia Town, Lahore, Pakistan.</p><strong>Monday – Saturday · 9:00 PM – 10:00 PM</strong></article></div></div></section>
