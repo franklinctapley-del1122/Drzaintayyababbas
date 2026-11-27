@@ -12,7 +12,7 @@ const images = [
   { src: "https://media.fluke.com/eeb5ef91-63a7-4e96-aa34-b108002cb02d_original__size.jpg", alt: "Surgeons working around a patient in a modern operating theatre", caption: "Operating theatre environment" },
   { src: "https://www.hopkinsmedicine.org/-/media/images/articles/2018/07/geriatric-surgery-640x640.jpeg", alt: "Operating room team working together during surgery", caption: "Coordinated surgical care" },
   { src: "https://static.wixstatic.com/media/04b70ad4e4af4a9290c1769bf2b63030.jpg/v1/fit/w_2500%2Ch_1330%2Cal_c/04b70ad4e4af4a9290c1769bf2b63030.jpg", alt: "Surgical team preparing and performing an operation", caption: "Teamwork in the operating room" },
-  { src: "https://www.kghvisakhapatnam.org/admin/upload/Surgical%20Oncology.webp", alt: "Surgical team performing an operation in a hospital theatre", caption: "Surgical oncology theatre" },
+  { src: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=85", alt: "Surgical team performing an operation in a hospital theatre", caption: "Surgical oncology theatre" },
   { src: "https://www.clinicbarcelona.org/uploads/media/default/0021/72/3130ca282b7cb8b37fa7dec95a9fa207953da8bd.jpg", alt: "Surgeons and assistants working together during an operation", caption: "Modern operative care" },
 ];
 
