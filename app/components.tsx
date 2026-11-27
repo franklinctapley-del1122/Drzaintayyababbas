@@ -8,8 +8,8 @@ export function Header(){
  const [menuOpen,setMenuOpen]=useState(false);
  const [specialtiesOpen,setSpecialtiesOpen]=useState(false);
  return <>
- <div className="doctor-topbar"><div className="container doctor-topbar-inner"><a href="tel:+923705978093">☎ &nbsp;+92 370 5978093</a><span className="doctor-topbar-separator">/</span><a href="https://wa.me/923705978093">WhatsApp Appointments</a></div></div>
- <header className="site-header reference-header doctor-reference-header">
+ <div className="doctor-topbar"><div className="container doctor-topbar-inner"><a href="tel:+923705978093">+92 370 5978093</a><span className="doctor-topbar-separator">/</span><a href="https://wa.me/923705978093">WhatsApp Appointments</a></div></div>
+ <header className="site-header doctor-reference-header">
   <div className="doctor-identity-row"><div className="container doctor-identity-inner">
    <Link className="doctor-identity-brand" href="/"><span className="doctor-identity-monogram">ZA</span><span className="doctor-identity-copy"><strong>Dr. Zain Tayyab Abbas</strong><small>MBBS · FCPS (General Surgery)</small><em>Fellowship in Surgical Oncology</em></span></Link>
    <div className="doctor-header-contact"><div className="doctor-header-contact-icon">☏</div><div><small>Call Today</small><a href="tel:+923705978093">+92 370 5978093</a></div></div>
