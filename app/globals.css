@@ -891,3 +891,45 @@ body{background:#fff;color:#172c43}
  .doctor-nav-row .nav-dropdown{width:100%}
  .doctor-nav-row .nav-booking{min-width:0;padding:12px 18px;font-size:12px}
 }
+
+
+/* Header layout hardening: isolate new rows from legacy global header rules */
+html body .doctor-topbar{display:block!important;width:100%!important;height:52px!important;min-height:52px!important;background:#1b4b91!important;color:#fff!important;position:relative!important;z-index:60!important}
+html body .doctor-topbar-inner{box-sizing:border-box!important;max-width:1280px!important;width:calc(100% - 48px)!important;height:52px!important;margin:0 auto!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;padding:0!important;background:transparent!important}
+html body .doctor-topbar-inner a{display:inline-block!important;color:#fff!important;font-size:14px!important;line-height:1.2!important;text-decoration:none!important;white-space:nowrap!important}
+html body .doctor-reference-header{display:block!important;position:relative!important;width:100%!important;max-width:none!important;background:#fff!important;z-index:55!important}
+html body .doctor-reference-header .doctor-identity-row{display:block!important;width:100%!important;background:#fff!important}
+html body .doctor-reference-header .doctor-identity-inner{box-sizing:border-box!important;max-width:1280px!important;width:calc(100% - 48px)!important;min-height:164px!important;height:auto!important;margin:0 auto!important;padding:18px 0!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:36px!important;background:#fff!important}
+html body .doctor-reference-header .doctor-identity-brand{display:flex!important;flex:1 1 auto!important;flex-direction:row!important;align-items:center!important;gap:16px!important;min-width:0!important;margin:0 auto 0 0!important;text-decoration:none!important;white-space:normal!important}
+html body .doctor-reference-header .doctor-identity-monogram{box-sizing:border-box!important;flex:0 0 58px!important;width:58px!important;height:66px!important;display:grid!important;place-items:center!important;border-right:5px solid #1b4b91!important;color:#1b4b91!important;font-size:34px!important;font-weight:850!important}
+html body .doctor-reference-header .doctor-identity-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;gap:4px!important;min-width:0!important}
+html body .doctor-reference-header .doctor-identity-copy strong{display:block!important;color:#1b4b91!important;font-size:35px!important;line-height:1.12!important;font-weight:800!important;white-space:nowrap!important}
+html body .doctor-reference-header .doctor-identity-copy small,html body .doctor-reference-header .doctor-identity-copy em{display:block!important;color:#079fd0!important;font-size:13px!important;line-height:1.3!important;font-style:normal!important;white-space:nowrap!important}
+html body .doctor-reference-header .doctor-header-contact,html body .doctor-reference-header .doctor-header-hours{display:flex!important;flex:0 0 auto!important;flex-direction:row!important;align-items:center!important;gap:14px!important;white-space:normal!important}
+html body .doctor-reference-header .doctor-header-contact-icon{flex:0 0 42px!important;width:42px!important;height:42px!important;display:grid!important;place-items:center!important;border:1.5px solid #079fd0!important;border-radius:50%!important;color:#079fd0!important;font-size:24px!important}
+html body .doctor-reference-header .doctor-header-contact small,html body .doctor-reference-header .doctor-header-hours small{display:block!important;color:#687585!important;font-size:13px!important;line-height:1.3!important;margin:0 0 6px!important}
+html body .doctor-reference-header .doctor-header-contact a,html body .doctor-reference-header .doctor-header-hours strong{display:block!important;color:#141c26!important;font-size:16px!important;line-height:1.4!important;font-weight:550!important;text-decoration:none!important;white-space:nowrap!important}
+html body .doctor-reference-header .doctor-header-hours span{display:block!important;color:#667789!important;font-size:11px!important;line-height:1.3!important;margin-top:4px!important;white-space:nowrap!important}
+html body .doctor-reference-header .doctor-nav-row{display:block!important;width:100%!important;background:#f7f7f7!important}
+html body .doctor-reference-header .doctor-nav-row .nav{box-sizing:border-box!important;max-width:1280px!important;width:calc(100% - 48px)!important;min-height:62px!important;height:auto!important;margin:0 auto!important;padding:0!important;display:flex!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;background:transparent!important}
+html body .doctor-reference-header .doctor-nav-row nav{display:flex!important;flex:1 1 auto!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;justify-content:flex-start!important;gap:clamp(18px,2.6vw,40px)!important;min-width:0!important;background:transparent!important}
+html body .doctor-reference-header .doctor-nav-row nav>a,html body .doctor-reference-header .doctor-nav-row .nav-dropdown-trigger{display:inline-block!important;padding:0!important;color:#101820!important;font-size:15px!important;line-height:1.3!important;font-weight:650!important;text-decoration:none!important;white-space:nowrap!important}
+html body .doctor-reference-header .doctor-nav-row .nav-booking{display:inline-flex!important;flex:0 0 190px!important;min-width:190px!important;min-height:54px!important;align-items:center!important;justify-content:center!important;margin:0!important;padding:12px 18px!important;background:#1b4b91!important;color:#fff!important;border-radius:4px!important;font-size:15px!important;font-weight:700!important;text-decoration:none!important;white-space:nowrap!important}
+@media(max-width:760px){
+ html body .doctor-topbar,html body .doctor-topbar-inner{height:42px!important;min-height:42px!important}
+ html body .doctor-topbar-inner{width:calc(100% - 28px)!important;gap:7px!important}
+ html body .doctor-topbar-inner a{font-size:11px!important}
+ html body .doctor-reference-header .doctor-identity-inner{width:calc(100% - 28px)!important;min-height:0!important;padding:16px 0!important;flex-wrap:wrap!important;gap:14px!important}
+ html body .doctor-reference-header .doctor-identity-brand{flex:0 0 100%!important;width:100%!important}
+ html body .doctor-reference-header .doctor-identity-copy strong{font-size:24px!important}
+ html body .doctor-reference-header .doctor-identity-copy small,html body .doctor-reference-header .doctor-identity-copy em{font-size:11px!important}
+ html body .doctor-reference-header .doctor-header-contact,html body .doctor-reference-header .doctor-header-hours{flex:1 1 44%!important;gap:8px!important}
+ html body .doctor-reference-header .doctor-header-contact-icon{flex-basis:32px!important;width:32px!important;height:32px!important;font-size:18px!important}
+ html body .doctor-reference-header .doctor-header-contact a,html body .doctor-reference-header .doctor-header-hours strong{font-size:12px!important;white-space:normal!important}
+ html body .doctor-reference-header .doctor-header-hours span{font-size:10px!important;white-space:normal!important}
+ html body .doctor-reference-header .doctor-nav-row .nav{width:calc(100% - 28px)!important;min-height:54px!important;flex-wrap:nowrap!important;gap:10px!important}
+ html body .doctor-reference-header .doctor-nav-row .mobile-menu-toggle{display:flex!important}
+ html body .doctor-reference-header .doctor-nav-row nav{display:none!important;position:absolute!important;top:54px!important;left:0!important;right:0!important;flex-direction:column!important;align-items:stretch!important;background:#fff!important;padding:14px 20px!important;z-index:90!important}
+ html body .doctor-reference-header .doctor-nav-row nav.is-open{display:flex!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-booking{flex:0 0 auto!important;min-width:0!important;min-height:40px!important;font-size:12px!important}
+}
