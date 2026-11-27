@@ -9,6 +9,7 @@ export function Header(){
  const [specialtiesOpen,setSpecialtiesOpen]=useState(false);
  return <>
  <div className="doctor-topbar"><div className="container doctor-topbar-inner"><a href="tel:+923705978093">+92 370 5978093</a><span className="doctor-topbar-separator">/</span><a href="https://wa.me/923705978093">WhatsApp Appointments</a></div></div>
+ <div className={menuOpen?"mobile-menu-backdrop is-open":"mobile-menu-backdrop"} onClick={()=>setMenuOpen(false)} aria-hidden="true"></div>
  <header className="site-header doctor-reference-header">
   <div className="doctor-identity-row"><div className="container doctor-identity-inner">
    <Link className="doctor-identity-brand" href="/"><span className="doctor-identity-monogram">ZA</span><span className="doctor-identity-copy"><strong>Dr. Zain Tayyab Abbas</strong><small>MBBS · FCPS (General Surgery)</small><em>Fellowship in Surgical Oncology</em></span></Link>
@@ -17,7 +18,7 @@ export function Header(){
   </div></div>
   <div className="doctor-nav-row"><div className="container nav">
    <button className="mobile-menu-toggle" type="button" aria-label={menuOpen?"Close navigation":"Open navigation"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(v=>!v)}><span></span><span></span><span></span></button>
-   <nav className={menuOpen?"is-open":""} aria-label="Main navigation">{links.map(([n,u])=>n==="Specialties"?<div className="nav-dropdown" key={u}><div className="nav-dropdown-row"><Link className="nav-dropdown-trigger" href={u} onClick={()=>setMenuOpen(false)}>Cancer Care</Link><button type="button" className="mobile-submenu-toggle" aria-label="Toggle cancer care submenu" aria-expanded={specialtiesOpen} onClick={()=>setSpecialtiesOpen(v=>!v)}>⌄</button></div><div className={specialtiesOpen?"nav-dropdown-menu is-open":"nav-dropdown-menu"}><Link href={u} className="nav-dropdown-all" onClick={()=>setMenuOpen(false)}>All Services</Link>{specialtyLinks.map(([label,path])=><Link key={path} href={path} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</div></div>:<Link key={u} href={u} onClick={()=>setMenuOpen(false)}>{n==="Clinics"?"Clinic Locations":n==="Blog"?"Blog":n}</Link>)}</nav>
+   <nav className={menuOpen?"is-open":""} aria-label="Main navigation"><button className="mobile-drawer-close" type="button" onClick={()=>{setMenuOpen(false);setSpecialtiesOpen(false)}} aria-label="Close navigation">×</button>{links.map(([n,u])=>n==="Specialties"?<div className="nav-dropdown" key={u}><div className="nav-dropdown-row"><Link className="nav-dropdown-trigger" href={u} onClick={()=>setMenuOpen(false)}>Cancer Care</Link><button type="button" className="mobile-submenu-toggle" aria-label="Toggle cancer care submenu" aria-expanded={specialtiesOpen} onClick={()=>setSpecialtiesOpen(v=>!v)}>⌄</button></div><div className={specialtiesOpen?"nav-dropdown-menu is-open":"nav-dropdown-menu"}><Link href={u} className="nav-dropdown-all" onClick={()=>setMenuOpen(false)}>All Services</Link>{specialtyLinks.map(([label,path])=><Link key={path} href={path} onClick={()=>setMenuOpen(false)}>{label}</Link>)}</div></div>:<Link key={u} href={u} onClick={()=>setMenuOpen(false)}>{n==="Clinics"?"Clinic Locations":n==="Blog"?"Blog":n}</Link>)}</nav>
    <a className="button button-small nav-booking" href={wa}>Book Appointment</a>
   </div></div>
  </header>
