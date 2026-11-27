@@ -11,7 +11,7 @@ export default function ExperienceCounter() {
       current += 1;
       setValue(current);
       if (current >= 10) window.clearInterval(timer);
-    }, 90);
+    }, 120);
     return () => window.clearInterval(timer);
   }, []);
 
