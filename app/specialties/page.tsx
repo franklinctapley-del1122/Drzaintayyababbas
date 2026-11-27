@@ -28,7 +28,7 @@ const data = [
 function SpecialtyIcon({ index }: { index: number }) {
   const icons = [
     "/images/healthicons/oncology.svg",
-    "/images/healthicons/breast.svg",
+    "/images/healthicons/body.svg",
     "/images/healthicons/colon.svg",
     "/images/healthicons/thyroid.svg",
     "/images/healthicons/general-surgery.svg",
