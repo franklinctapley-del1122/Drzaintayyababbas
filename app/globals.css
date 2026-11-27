@@ -655,7 +655,7 @@ body{background:#fff;color:#172c43}
 .clinical-gallery-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:34px}
 .clinical-gallery-heading h2{font-size:clamp(30px,3.7vw,44px);line-height:1.15;color:#15375d;margin:10px 0 0}
 .gallery-button{background:#1b4c78;white-space:nowrap}
-.clinical-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px}
+.clinical-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
 .clinical-gallery-grid figure{height:235px;margin:0;overflow:hidden;border-radius:10px;background:#eaf0f3;box-shadow:0 10px 28px #15375d12}
 .clinical-gallery-grid img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .4s}
 .clinical-gallery-grid figure:hover img{transform:scale(1.05)}
