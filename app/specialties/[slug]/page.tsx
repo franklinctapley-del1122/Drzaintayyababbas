@@ -89,10 +89,10 @@ const services: Record<string, Service> = {
     ]
   },
   "endocrine-surgery": {
-    title: "Thyroid & Endocrine Conditions Information",
-    short: "General patient information about thyroid and endocrine investigations and referral pathways",
-    intro: "This educational page explains common investigations for thyroid and parathyroid conditions. The appropriate assessment depends on symptoms, examination, blood tests and imaging, and may require referral to an endocrinologist, ENT surgeon or another relevant specialist.",
-    context: "The supplied CV does not document a dedicated endocrine surgery qualification or thyroid/parathyroid surgical experience. This page is general patient education and does not present endocrine surgery as a verified specialist service offered by Dr. Abbas.",
+    title: "Endocrine Surgery",
+    short: "Endocrine surgery consultation in Lahore for assessment of thyroid and parathyroid conditions",
+    intro: "Endocrine surgery focuses on the surgical assessment and management of selected conditions affecting hormone-producing glands, including the thyroid and parathyroid. The appropriate pathway depends on the diagnosis, symptoms, examination, blood tests, imaging and any tissue results.",
+    context: "Dr. Zain Tayyab Abbas identifies Endocrine Surgery as one of his consultation specialties. The specific assessment and any treatment recommendation depend on the patient’s diagnosis and clinical findings. Patients should confirm the exact service and appointment details with the clinic before travelling.",
     topics: [
       ["Thyroid and neck investigations", "Assessment may include thyroid function blood tests and ultrasound. If a nodule or other finding needs further evaluation, additional tests may be considered according to clinical findings."],
       ["Understanding thyroid nodules", "Thyroid nodules are common and many are not cancerous. Their assessment depends on ultrasound characteristics, size, symptoms, relevant history and, in selected cases, needle sampling."],
@@ -410,7 +410,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services[slug];
-  const educationalOnly = slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery";
+  const educationalOnly = slug.endsWith("-information") || slug === "laparoscopic-surgery";
   if (!service) return { title: "Surgical Consultation in Lahore" };
   return {
     title: service.title + (slug.endsWith("-information") || slug === "endocrine-surgery" || slug === "laparoscopic-surgery" ? " | Patient Information" : " Consultation in Lahore"),
@@ -422,13 +422,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const service = services[slug];
+  const educationalOnly = slug.endsWith("-information") || slug === "laparoscopic-surgery";
   if (!service) return <Shell><main><PageHero eyebrow="Specialties" title="Specialty information" lead="Please explore our consultation areas." /></main></Shell>;
 
   const linkLabels: Record<string, string> = {
     "surgical-oncology": "Surgical oncology consultation",
     "breast-cancer-consultation": "breast cancer consultation",
     "colorectal-cancer-consultation": "colorectal cancer consultation",
-    "endocrine-surgery": "thyroid and endocrine patient information",
+    "endocrine-surgery": "endocrine surgery consultation",
     "general-surgery": "general surgery consultation",
     "laparoscopic-surgery": "laparoscopic surgery consultation",
     "research": "research and publications",
