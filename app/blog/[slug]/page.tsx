@@ -81,7 +81,7 @@ const articles: Record<string, Article> = {
     related: ["/specialties/hernia-information","/specialties/general-surgery","/clinics"]
   },
   "prepare-for-surgical-consultation": {
-    title: "What to Bring to Your Surgical Consultation",
+    title: "What to Bring to Your Consultation",
     category: "Patient Resources",
     excerpt: "A simple checklist to help you organise reports, medicines and questions before meeting a surgeon.",
     intro: "A little preparation can make a surgical appointment more useful. You do not need to have every test completed before asking for advice; bring what you already have and let the clinic guide you about anything missing.",
