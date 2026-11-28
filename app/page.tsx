@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {Shell,CTA,wa} from "./components";
 import ExperienceCounter from "./components/ExperienceCounter";
+import HeroBanner from "./components/HeroBanner";
 
 export const metadata={
   title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",
@@ -39,11 +40,7 @@ function SectionHead({kicker,title,desc}:{kicker:string,title:string,desc?:strin
 export default function Home(){
  return <Shell><main>
   {/* 01 */}
-  <section className="home-hero premium-hero reference-hero"><div className="reference-hero-image" aria-label="Clinic and surgical oncology photographs">
-    <img className="hero-banner-slide hero-banner-slide-1" src="/images/unnamed%20(4).webp" alt="Surgical oncology care at Dr. Zain Tayyab Abbas clinic" fetchPriority="high"/>
-    <img className="hero-banner-slide hero-banner-slide-2" src="/images/IMG-20261126-WA0024.jpg" alt="Dr. Zain Tayyab Abbas medical practice" />
-    <img className="hero-banner-slide hero-banner-slide-3" src="/images/file_000000006cf88211849a3b77ef72c585.png" alt="Surgical oncology patient care and consultation" />
-  </div><div className="container reference-hero-inner"><div className="hero-copy"><div className="eyebrow">Dr. Zain Tayyab Abbas · Lahore</div><h1>Surgical<br/><em>Oncology</em></h1><p className="hero-lead">Surgical oncology and endocrine surgery consultations with a considered, patient-focused approach.</p><div className="hero-actions"><a className="button" href={wa}>Book Appointment</a></div></div></div><a className="reference-hero-arrow reference-hero-prev" href="/about" aria-label="Meet the doctor">‹</a><a className="reference-hero-arrow reference-hero-next" href="/specialties" aria-label="Explore specialties">›</a></section>
+  <HeroBanner/>
   {/* 02 */}
   <section className="credential-strip"><div className="container strip-grid"><div><span>QUALIFICATION</span><strong>MBBS · FCPS General Surgery</strong></div><div><span>SPECIALTIES</span><strong>Surgical Oncology · Endocrine Surgery</strong></div><div><span>LOCATION</span><strong>Lahore, Pakistan</strong></div></div></section>
   {/* 04 */}
