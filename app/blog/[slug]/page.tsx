@@ -150,7 +150,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = articles[slug];
   if (!article) return { title: "Patient Education Blog" };
   return {
-    title: article.title + " | Patient Education Lahore",
+    title: slug === "breast-self-assessment" ? "Breast Self-Assessment: 5-Step Guide | Dr. Zain" : article.title + " | Patient Education Lahore",
     description: article.excerpt,
     alternates: { canonical: "/blog/" + slug },
     openGraph: { title: article.title, description: article.excerpt, type: "article", images: article.cover ? [{ url: article.cover, alt: article.title }] : undefined },
@@ -162,7 +162,7 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const article = articles[slug];
   if (!article) notFound();
-  const articleSchema = {"@context":"https://schema.org","@type":"Article","headline":article.title,"description":article.excerpt,"image":article.cover ? ["https://dr-zain-tayyab-abbas.vercel.app"+article.cover] : undefined,"mainEntityOfPage":{"@type":"WebPage","@id":"https://dr-zain-tayyab-abbas.vercel.app/blog/"+slug},"publisher":{"@type":"Organization","name":"Dr. Zain Tayyab Abbas - Patient Education","url":"https://dr-zain-tayyab-abbas.vercel.app"}};
+  const articleSchema = {"@context":"https://schema.org","@type":"Article","headline":article.title,"description":article.excerpt,"datePublished":"2026-11-28","dateModified":"2026-11-28","image":article.cover ? ["https://dr-zain-tayyab-abbas.vercel.app"+article.cover] : undefined,"mainEntityOfPage":{"@type":"WebPage","@id":"https://dr-zain-tayyab-abbas.vercel.app/blog/"+slug},"publisher":{"@type":"Organization","name":"Dr. Zain Tayyab Abbas - Patient Education","url":"https://dr-zain-tayyab-abbas.vercel.app"}};
   const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dr-zain-tayyab-abbas.vercel.app/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://dr-zain-tayyab-abbas.vercel.app/blog"},{"@type":"ListItem","position":3,"name":article.title,"item":"https://dr-zain-tayyab-abbas.vercel.app/blog/"+slug}]};
   return <Shell><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/><main className="blog-article-page">
     <div className="container blog-article-wrap">
