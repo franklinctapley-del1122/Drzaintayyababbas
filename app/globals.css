@@ -1112,3 +1112,67 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 .blog-faq-item{padding:18px 0;border-bottom:1px solid rgba(20,42,80,.14)}
 .blog-faq-item h3{margin:0 0 8px;font-size:1.08rem}
 .blog-faq-item p{margin:0}
+
+/* Breast self-assessment article: clear heading hierarchy and accessible comparison table */
+.blog-article-content h2{
+  color:#123f79;
+  font-size:clamp(26px,2.2vw,32px);
+  line-height:1.25;
+  font-weight:750;
+  letter-spacing:-.025em;
+  margin:44px 0 18px;
+}
+.blog-article-content h3{
+  color:#18324d;
+  font-size:clamp(20px,1.7vw,24px);
+  line-height:1.35;
+  font-weight:650;
+  margin:30px 0 12px;
+}
+.blog-article-content h4{
+  color:#315477;
+  font-size:18px;
+  line-height:1.45;
+  font-weight:650;
+  margin:22px 0 10px;
+}
+.blog-comparison-table-wrap{
+  width:100%;
+  overflow-x:auto;
+  margin:22px 0 30px;
+  border:1px solid #dce6f0;
+  border-radius:12px;
+  -webkit-overflow-scrolling:touch;
+}
+.blog-comparison-table{
+  width:100%;
+  min-width:680px;
+  border-collapse:collapse;
+  background:#fff;
+  font-size:15px;
+  line-height:1.6;
+}
+.blog-comparison-table th{
+  background:#123f79;
+  color:#fff;
+  text-align:left;
+  font-weight:700;
+  padding:15px 16px;
+  vertical-align:top;
+}
+.blog-comparison-table td{
+  padding:14px 16px;
+  border-top:1px solid #e3eaf1;
+  color:#344b62;
+  vertical-align:top;
+}
+.blog-comparison-table tbody tr:nth-child(even){background:#f5f8fc}
+.blog-comparison-table td:first-child{font-weight:650;color:#18324d}
+.blog-article-cover img{object-fit:contain;background:#f8f8f8}
+@media(max-width:640px){
+  .blog-article-content h2{font-size:25px;line-height:1.3;margin:34px 0 14px}
+  .blog-article-content h3{font-size:20px;line-height:1.4;margin:25px 0 10px}
+  .blog-article-content h4{font-size:17px;line-height:1.45;margin:20px 0 9px}
+  .blog-comparison-table{font-size:14px;min-width:620px}
+  .blog-comparison-table th,.blog-comparison-table td{padding:12px}
+}
