@@ -24,7 +24,7 @@ export default function HeroBanner(){
     <div className="container reference-hero-inner"><div className="hero-copy">
       <div className="eyebrow">Dr. Zain Tayyab Abbas · Lahore</div>
       <h1>Surgical<br/><em>Oncology</em></h1>
-      <p className="hero-lead">Surgical oncology and endocrine surgery consultations with a considered, patient-focused approach.</p>
+      <p className="hero-lead">Surgical oncology and advanced laparoscopic surgery consultations with a considered, patient-focused approach.</p><p className="hero-credentials">MBBS · FCPS (General Surgery) · Fellowship in Surgical Oncology · Fellowship in Advanced Laparoscopic Surgery</p>
       <div className="hero-actions"><a className="button" href={wa}>Book Appointment</a></div>
     </div></div>
     <button type="button" className="reference-hero-arrow reference-hero-prev" onClick={prev} aria-label="Previous banner image">‹</button>
