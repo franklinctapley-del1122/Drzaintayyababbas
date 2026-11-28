@@ -6,11 +6,11 @@ import HeroBanner from "./components/HeroBanner";
 import ServicesCarousel from "./components/ServicesCarousel";
 
 export const metadata={
-  title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",
-  description:"Meet Dr. Zain Tayyab Abbas, Surgical Oncologist and Endocrine Surgeon in Lahore. Explore professional credentials, consultation areas, patient guides and clinic locations in Johar Town and Valencia Town.",
+  title:"Surgical Oncologist & Advanced Laparoscopic Surgeon in Lahore | Dr. Zain Tayyab Abbas",
+  description:"Meet Dr. Zain Tayyab Abbas, Surgical Oncologist and Advanced Laparoscopic Surgeon in Lahore. Explore professional credentials, consultation areas, patient guides and clinic locations.",
   keywords:["Dr Zain Tayyab Abbas","Surgical Oncologist in Lahore","Endocrine Surgeon in Lahore","Cancer Surgeon Lahore","Breast Cancer Surgeon Lahore","Thyroid Surgeon Lahore","Surgical Oncologist Johar Town"],
   alternates:{canonical:"/"},
-  openGraph:{title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",description:"Professional credentials, surgical consultation areas and clinic information in Lahore, Pakistan.",url:"/",type:"website"}
+  openGraph:{title:"Surgical Oncologist & Advanced Laparoscopic Surgeon in Lahore | Dr. Zain Tayyab Abbas",description:"Professional credentials, surgical consultation areas and clinic information in Lahore, Pakistan.",url:"/",type:"website"}
 };
 
 const specialties=[
@@ -43,10 +43,10 @@ export default function Home(){
   {/* 01 */}
   <HeroBanner/>
   {/* 02 */}
-  <section className="credential-strip"><div className="container strip-grid"><div><span>QUALIFICATION</span><strong>MBBS · FCPS General Surgery</strong></div><div><span>SPECIALTIES</span><strong>Surgical Oncology · Endocrine Surgery</strong></div><div><span>LOCATION</span><strong>Lahore, Pakistan</strong></div></div></section>
+  <section className="credential-strip"><div className="container strip-grid"><div><span>QUALIFICATION</span><strong>MBBS · FCPS General Surgery</strong></div><div><span>SPECIALTIES</span><strong>Surgical Oncology · Endocrine Surgery · Advanced Laparoscopic Surgery</strong></div><div><span>LOCATION</span><strong>Lahore, Pakistan</strong></div></div></section>
   {/* 04 */}
   <section className="doctor-intro-showcase"><div className="container">
-    <div className="doctor-intro-heading"><span>MEET YOUR SURGEON</span><p>MBBS · FCPS (General Surgery) · Fellowship in Surgical Oncology</p><h2>Dr. Zain Tayyab Abbas <em>Specialist Surgeon</em></h2></div>
+    <div className="doctor-intro-heading"><span>MEET YOUR SURGEON</span><p>MBBS · FCPS (General Surgery) · Fellowship in Surgical Oncology · Fellowship in Advanced Laparoscopic Surgery</p><h2>Dr. Zain Tayyab Abbas <em>Surgical Oncologist &amp; Advanced Laparoscopic Surgeon</em></h2></div>
     <div className="doctor-intro-grid">
       <div className="doctor-experience-column"><ExperienceCounter/><h3>Clinical &amp; Surgical Experience</h3><p>His professional journey includes postgraduate surgical training and clinical appointments at Jinnah Hospital, Sir Ganga Ram Hospital, Indus Hospital and the University of Lahore Teaching Hospital, followed by fellowship training in Surgical Oncology at Shaukat Khanum Memorial Cancer Hospital &amp; Research Centre.</p><Link className="under-link" href="/about">Explore full professional profile ↗</Link></div>
       <div className="doctor-portrait"><Image src="/images/dr-zain-tayyab-abbas-main.webp" alt="Dr. Zain Tayyab Abbas" fill sizes="(max-width: 800px) 90vw, 28vw" style={{objectFit:"cover",objectPosition:"center 20%"}}/></div>
