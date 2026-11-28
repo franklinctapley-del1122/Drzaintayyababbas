@@ -162,7 +162,9 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   const { slug } = await params;
   const article = articles[slug];
   if (!article) notFound();
-  return <Shell><main className="blog-article-page">
+  const articleSchema = {"@context":"https://schema.org","@type":"Article","headline":article.title,"description":article.excerpt,"image":article.cover ? ["https://dr-zain-tayyab-abbas.vercel.app"+article.cover] : undefined,"mainEntityOfPage":{"@type":"WebPage","@id":"https://dr-zain-tayyab-abbas.vercel.app/blog/"+slug},"publisher":{"@type":"Organization","name":"Dr. Zain Tayyab Abbas - Patient Education","url":"https://dr-zain-tayyab-abbas.vercel.app"}};
+  const breadcrumbSchema = {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://dr-zain-tayyab-abbas/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://dr-zain-tayyab-abbas.vercel.app/blog"},{"@type":"ListItem","position":3,"name":article.title,"item":"https://dr-zain-tayyab-abbas.vercel.app/blog/"+slug}]};
+  return <Shell><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(articleSchema)}}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(breadcrumbSchema)}}/><main className="blog-article-page">
     <div className="container blog-article-wrap">
       <nav className="blog-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/blog">Blog</Link><span>/</span><span>{article.category}</span></nav>
 {article.cover && <figure className="blog-article-cover"><img src={article.cover} alt="Breast self-awareness guide featuring Dr. Zain Tayyab Abbas and five steps to notice breast changes" width="1600" height="900" fetchPriority="high"/><figcaption>Breast self-awareness: notice changes and seek medical advice when needed.</figcaption></figure>}
