@@ -1322,3 +1322,16 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
  .cancer-services-action>a{min-width:0;width:min(82%,360px);padding:16px 22px;font-size:13px}
 }
 @media(prefers-reduced-motion:reduce){.cancer-services-track,.cancer-service-image img,.services-carousel-arrows button{transition:none!important}}
+
+/* Final carousel alignment fix: one precisely sized slide per viewport */
+.cancer-services-section .cancer-services-slider{width:100%;overflow:hidden;position:relative}
+.cancer-services-section .cancer-services-track{display:flex!important;flex-wrap:nowrap!important;gap:0!important;width:100%!important;animation:none!important;transition:transform .55s cubic-bezier(.22,.75,.25,1)!important;will-change:transform}
+.cancer-services-section .cancer-services-track>.cancer-service-card{box-sizing:border-box!important;display:flex!important;flex:0 0 100%!important;width:100%!important;min-width:100%!important;padding:0 5px 14px!important}
+.cancer-services-section .cancer-services-track .cancer-service-image{width:100%!important;height:clamp(250px,34vw,390px)!important}
+.cancer-services-section .cancer-services-track .cancer-service-info{width:min(88%,620px)!important;min-height:190px!important;margin:-38px auto 0!important}
+@media(max-width:600px){
+ .cancer-services-section .cancer-services-track>.cancer-service-card{padding:0 4px 12px!important}
+ .cancer-services-section .cancer-services-track .cancer-service-image{height:260px!important}
+ .cancer-services-section .cancer-services-track .cancer-service-info{width:90%!important;min-height:190px!important;margin:-34px auto 0!important}
+}
+@media(prefers-reduced-motion:reduce){.cancer-services-section .cancer-services-track{transition:none!important}}
