@@ -1076,35 +1076,6 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   .reference-hero .hero-copy,.cancer-services-heading,.cancer-service-card,.trust-credentials-grid article,.approach-grid article,.trust-clarity-grid article,.clinic-card,.home-blog-card{animation:none!important;transition:none!important}
 }
 
-/* Mobile header drawer styled to match supplied reference video */
-.mobile-menu-backdrop{display:none}
-.mobile-drawer-close{display:none}
-@media(max-width:760px){
- html body .doctor-reference-header{position:relative!important}
- html body .doctor-topbar{background:#087fc5!important}
- html body .doctor-identity-inner{position:relative!important;padding:13px 0!important}
- html body .doctor-reference-header .doctor-identity-brand{flex:1 1 auto!important;width:auto!important;padding-right:48px!important}
- html body .doctor-reference-header .doctor-identity-copy strong{font-size:20px!important;white-space:normal!important}
- html body .doctor-reference-header .doctor-header-contact,html body .doctor-reference-header .doctor-header-hours{display:none!important}
- html body .doctor-reference-header .doctor-nav-row{background:#fff!important}
- html body .doctor-reference-header .doctor-nav-row .nav{width:100%!important;min-height:0!important;height:0!important;position:static!important;padding:0!important;gap:0!important}
- html body .doctor-reference-header .doctor-nav-row .mobile-menu-toggle{position:absolute!important;right:14px!important;top:57px!important;width:42px!important;height:42px!important;z-index:100!important;background:#f0443e!important;border-radius:4px!important;align-items:center!important;justify-content:center!important}
- html body .doctor-reference-header .doctor-nav-row .mobile-menu-toggle span{background:#fff!important;width:22px!important}
- html body .doctor-reference-header .doctor-nav-row nav{display:flex!important;position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:auto!important;width:min(82vw,340px)!important;height:100dvh!important;max-height:100dvh!important;overflow-y:auto!important;transform:translateX(-105%)!important;transition:transform .32s ease!important;background:#fff!important;box-shadow:8px 0 30px #0003!important;border-right:3px solid #f0443e!important;padding:76px 16px 24px!important;z-index:202!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
- html body .doctor-reference-header .doctor-nav-row nav.is-open{display:flex!important;transform:translateX(0)!important}
- html body .doctor-reference-header .doctor-nav-row nav>a,html body .doctor-reference-header .doctor-nav-row .nav-dropdown-trigger{display:flex!important;align-items:center!important;min-height:43px!important;padding:10px 5px!important;border-bottom:1px solid #edf0f3!important;color:#087fc5!important;font-size:13px!important;font-weight:500!important;white-space:normal!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown{width:100%!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown-row{display:flex!important;align-items:center!important;border-bottom:1px solid #edf0f3!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown-row .nav-dropdown-trigger{flex:1!important;border:0!important}
- html body .doctor-reference-header .doctor-nav-row .mobile-submenu-toggle{display:grid!important;place-items:center!important;width:38px!important;height:40px!important;border:0!important;border-radius:50%!important;background:#f4f6f8!important;color:#e84b47!important;font-size:20px!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu{display:none!important;position:static!important;max-height:none!important;overflow:visible!important;padding:3px 0 8px 12px!important;margin:0!important;border:0!important;border-left:1px solid #e8edf1!important;box-shadow:none!important;background:#fff!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu.is-open{display:block!important}
- html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu a{display:block!important;padding:9px 5px!important;border-bottom:1px solid #f0f2f4!important;color:#087fc5!important;font-size:12px!important;line-height:1.4!important}
- .mobile-drawer-close{display:grid!important;place-items:center!important;position:fixed!important;top:14px!important;left:min(calc(82vw - 23px),317px)!important;width:38px!important;height:38px!important;border:0!important;border-radius:50%!important;background:#f0443e!important;color:#fff!important;font-size:30px!important;line-height:1!important;z-index:204!important}
- .mobile-menu-backdrop.is-open{display:block!important;position:fixed!important;inset:0!important;background:#0008!important;z-index:200!important}
- html body .doctor-reference-header .doctor-nav-row .nav-booking{position:absolute!important;right:64px!important;top:58px!important;min-height:40px!important;padding:8px 12px!important;font-size:11px!important;z-index:99!important}
-}
-
 .blog-article-cover{margin:0 0 28px;border-radius:22px;overflow:hidden;background:#fff0f7}
 .blog-article-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .blog-article-cover figcaption{padding:10px 16px;color:#59677f;font-size:.88rem}
@@ -1197,4 +1168,25 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   height:100%;
   object-fit:cover;
   border-radius:inherit;
+}
+
+/* Clear, visible list markers for article warning signs */
+.blog-article-content ul{
+  display:block;
+  list-style:disc outside;
+  padding-left:1.45rem;
+  margin:16px 0 24px;
+}
+.blog-article-content ul li{
+  display:list-item;
+  list-style:disc outside;
+  margin:0 0 11px;
+  padding-left:.25rem;
+  line-height:1.7;
+}
+.home-blog-image img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
