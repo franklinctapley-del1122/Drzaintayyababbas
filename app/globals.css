@@ -1190,3 +1190,54 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   height:100%;
   object-fit:cover;
 }
+
+/* Clinic location cards with the supplied building photographs */
+.clinic-card.location-photo{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:#102c35;
+  color:#fff;
+  border-color:rgba(255,255,255,.2);
+}
+.clinic-card.location-photo::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-1;
+  background:linear-gradient(105deg,rgba(8,29,40,.88),rgba(8,29,40,.67) 58%,rgba(8,29,40,.4));
+}
+.clinic-card.location-photo .clinic-location-photo{
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  opacity:.82;
+}
+.clinic-card.location-photo>*:not(.clinic-location-photo){
+  position:relative;
+  z-index:1;
+}
+.clinic-card.location-photo .clinic-index,
+.clinic-card.location-photo h2,
+.clinic-card.location-photo h3,
+.clinic-card.location-photo p,
+.clinic-card.location-photo strong,
+.clinic-card.location-photo .hours span{
+  color:#fff;
+}
+.clinic-card.location-photo p{max-width:520px;color:rgba(255,255,255,.9)}
+.clinic-card.location-photo .clinic-index{color:#c5e7f5}
+.clinic-card.location-photo .hours strong{color:#fff}
+.clinic-card.location-photo .button{
+  background:#fff;
+  color:#123f79;
+  border-color:#fff;
+}
+@media(max-width:640px){
+  .clinic-card.location-photo{min-height:280px;padding:24px}
+  .clinic-card.location-photo .clinic-location-photo{object-position:center}
+}
