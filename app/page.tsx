@@ -53,16 +53,6 @@ export default function Home(){
     </div>
   </div></section>
   {/* Professional credentials and clinical background */}
-  <section className="section trust-credentials"><div className="container">
-    <div className="trust-credentials-heading"><div className="eyebrow">Qualifications & professional background</div><h2>Training and experience you can learn more about</h2><p>Clear information about Dr. Zain Tayyab Abbas’s documented qualifications, specialist training and current hospital appointment.</p></div>
-    <div className="trust-credentials-grid">
-      <article><span className="trust-card-index">01 · QUALIFICATION</span><h3>MBBS</h3><p>University College of Medicine and Dentistry, Lahore.</p></article>
-      <article><span className="trust-card-index">02 · POSTGRADUATE</span><h3>FCPS · General Surgery</h3><p>College of Physicians & Surgeons of Pakistan · 2019.</p></article>
-      <article><span className="trust-card-index">03 · SPECIALIST TRAINING</span><h3>Fellowship in Surgical Oncology</h3><p>Shaukat Khanum Memorial Cancer Hospital & Research Centre, Lahore.</p></article>
-      <article><span className="trust-card-index">04 · CURRENT APPOINTMENT</span><h3>Senior Registrar</h3><p>Surgical Unit 1, Jinnah Hospital, Lahore. Listed from July 2025 in the professional profile.</p></article>
-    </div>
-    <div className="trust-credentials-link"><Link className="under-link" href="/about">View full qualifications & career history ↗</Link><Link className="under-link" href="/research">Explore research & academic work ↗</Link></div>
-  </div></section>
   {/* Cancer care services */}
   <section className="cancer-services-section"><div className="container">
     <div className="cancer-services-heading"><span>CONSULTATION AREAS</span><h2>Cancer Care &amp; Surgical Services</h2><p>Explore specialist consultation information for common surgical oncology and endocrine concerns.</p></div>
