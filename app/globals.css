@@ -1109,9 +1109,21 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 .blog-article-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
 .blog-article-cover figcaption{padding:10px 16px;color:#59677f;font-size:.88rem}
 .blog-faq-section{margin-top:38px}
-.blog-faq-item{padding:18px 0;border-bottom:1px solid rgba(20,42,80,.14)}
-.blog-faq-item h3{margin:0 0 8px;font-size:1.08rem}
-.blog-faq-item p{margin:0}
+.blog-faq-item{padding:0;border-bottom:1px solid rgba(20,42,80,.14)}
+.blog-faq-item:first-of-type{border-top:1px solid rgba(20,42,80,.14)}
+.blog-faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:18px;min-height:68px;padding:18px 4px;cursor:pointer;list-style:none;color:#18324d;font-size:18px;font-weight:650;line-height:1.45}
+.blog-faq-item summary::-webkit-details-marker{display:none}
+.blog-faq-item summary::marker{content:""}
+.blog-faq-item summary:focus-visible{outline:3px solid #079fd0;outline-offset:3px;border-radius:6px}
+.blog-faq-toggle{flex:0 0 32px;width:32px;height:32px;display:grid;place-items:center;border:1px solid #cbd9e7;border-radius:50%;color:#123f79;font-size:25px;font-weight:400;line-height:1;transition:transform .2s ease,background .2s ease,color .2s ease}
+.blog-faq-item[open] .blog-faq-toggle{transform:rotate(45deg);background:#123f79;color:#fff;border-color:#123f79}
+.blog-faq-answer{padding:0 52px 20px 4px}
+.blog-faq-answer p{margin:0;color:#52677d;line-height:1.75}
+@media(max-width:640px){
+ .blog-faq-item summary{min-height:62px;padding:15px 2px;font-size:16px;gap:12px}
+ .blog-faq-toggle{flex-basis:29px;width:29px;height:29px;font-size:23px}
+ .blog-faq-answer{padding:0 40px 17px 2px}
+}
 
 /* Breast self-assessment article: clear heading hierarchy and accessible comparison table */
 .blog-article-content h2{
