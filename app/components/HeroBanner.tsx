@@ -1,7 +1,7 @@
 "use client";
 
 import {useEffect,useState} from "react";
-import {wa} from "./components";
+import {wa} from "../components";
 
 const slides=[
   {src:"/images/unnamed%20(4).webp",alt:"Surgical oncology care at Dr. Zain Tayyab Abbas clinic"},
