@@ -134,8 +134,9 @@ const articles: Record<string, Article> = {
     sources: [
       {label:"American College of Obstetricians and Gynecologists (ACOG) - Monthly breast self-exams",url:"https://www.acog.org/womens-health/experts-and-stories/ask-acog/monthly-self-exams-of-breasts"},
       {label:"Susan G. Komen - Breast self-exam and breast awareness",url:"https://www.komen.org/breast-cancer/screening/breast-self-exam/"},
-      {label:"Mayo Clinic - Breast self-exam for breast awareness",url:"https://www.mayoclinic.org/tests-procedures/breast-exam/about/pac-20393237"},\n      {label:"NHS - How to check your breasts or chest",url:"https://www.nhs.uk/tests-and-treatments/how-to-check-your-breasts-or-chest/"},\n      {label:"Pakistan National Cancer Screening and Early Diagnosis Guidelines",url:"https://www.iccp-portal.org/sites/default/files/2026-04/National_Cancer_Screening_Guidelines_2024_1%20%281%29.pdf"},
-      {label:"Pakistan National Cancer Screening and Early Diagnosis Guidelines",url:"https://www.iccp-portal.org/sites/default/files/2026-04/National_Cancer_Screening_Guidelines_2024_1%20%281%29.pdf"}
+      {label:"Mayo Clinic - Breast self-exam for breast awareness",url:"https://www.mayoclinic.org/tests-procedures/breast-exam/about/pac-20393237"},
+      {label:"NHS - How to check your breasts or chest",url:"https://www.nhs.uk/tests-and-treatments/how-to-check-your-breasts-or-chest/"},
+      {label:"Pakistan National Cancer Screening and Early Diagnosis Guidelines",url:"https://www.iccp-portal.org/sites/default/files/2026-04/National_Cancer_Screening_Guidelines_2024_1%20%281%29.pdf"},
     ],
     related: ["/blog/breast-lump-assessment","/specialties/breast-cancer-consultation","/specialties/surgical-oncology","/contact"]
   },
