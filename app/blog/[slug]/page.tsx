@@ -55,20 +55,6 @@ const articles: Record<string, Article> = {
     ],
     related: ["/specialties/surgical-oncology","/clinics","/contact","/blog/prepare-for-surgical-consultation"]
   },
-  "breast-lump-assessment": {
-    title: "Breast Lump Assessment: Tests and Next Steps",
-    category: "Breast Health",
-    excerpt: "A patient-friendly overview of clinical assessment, breast imaging and biopsy reports.",
-    intro: "A breast lump or change can have several causes. Many breast changes are not cancer, but a new or persistent lump should be assessed by a qualified healthcare professional rather than judged by touch alone.",
-    sections: [
-      { heading: "What may happen during assessment?", paragraphs: ["Assessment may include questions about when the lump appeared, whether it has changed, associated symptoms and personal or family history. A clinician may examine the breasts and nearby lymph node areas and decide whether imaging or tissue sampling is appropriate.", "The tests selected depend on factors such as age, examination findings and the nature of the breast change."] },
-      { heading: "Understanding imaging and biopsy", paragraphs: ["Depending on the situation, investigations may include diagnostic mammography or breast ultrasound. Sometimes MRI is used for additional information. If imaging or examination identifies an area that needs clarification, a biopsy may be recommended so a pathologist can examine a tissue sample.", "A biopsy result should be interpreted together with the imaging and clinical findings. Bring the actual reports and images to the consultation."] },
-      { heading: "What to bring to an appointment", bullets: ["Mammogram, ultrasound or MRI reports and images", "Biopsy or histopathology report, if performed", "Receptor or biomarker results, if available", "Previous breast clinic letters or treatment summaries", "A list of medicines and relevant medical history"], paragraphs: ["If a test has not yet been arranged, do not delay seeking assessment just to collect every item on this list. The clinic can advise what is needed for your appointment."] },
-      { heading: "Questions you can ask", paragraphs: [], bullets: ["What did the examination and imaging show?", "Is a biopsy needed, and what will it help establish?", "When and how will results be explained?", "Do I need another specialist involved?", "What are the next steps based on my results?"] }
-    ],
-    sources: [{label:"National Cancer Institute – How breast cancer is diagnosed",url:"https://www.cancer.gov/types/breast/diagnosis"},{label:"American Cancer Society – Breast biopsy",url:"https://www.cancer.org/cancer/types/breast-cancer/screening-tests-and-early-detection/breast-biopsy.html"}],
-    related: ["/specialties/breast-cancer-consultation","/specialties/surgical-oncology","/clinics"]
-  },
   "thyroid-nodules-assessment": {
     title: "Thyroid Nodules: Understanding the Assessment",
     category: "Endocrine Surgery",
