@@ -1250,3 +1250,21 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   .clinic-card.location-photo{min-height:300px;padding:24px}
   .clinic-card.location-photo .clinic-location-photo{object-position:center}
 }
+
+
+/* Homepage hero slider: functional controls and responsive banner framing */
+.home-hero.reference-hero{height:clamp(500px,62vw,660px)!important;min-height:500px!important;max-height:660px!important;position:relative!important;overflow:hidden!important}
+.reference-hero-image{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important}
+.reference-hero-image .hero-banner-slide{position:absolute!important;inset:0!important;display:block!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 42%!important;opacity:0!important;animation:none!important;transition:opacity .55s ease!important}
+.reference-hero-image .hero-banner-slide.is-active{opacity:1!important}
+.reference-hero-image::after{z-index:1!important;background:linear-gradient(90deg,rgba(255,255,255,.94) 0%,rgba(255,255,255,.78) 34%,rgba(255,255,255,.25) 66%,rgba(255,255,255,.04) 100%)!important}
+.reference-hero-inner{position:relative!important;z-index:2!important;height:100%!important;pointer-events:none}
+.reference-hero .hero-copy{pointer-events:auto!important}
+.reference-hero-arrow{z-index:5!important;appearance:none!important;border:0!important;cursor:pointer!important;pointer-events:auto!important;transition:background .2s ease,transform .2s ease!important}
+.reference-hero-arrow:hover{background:#079fd0!important;color:#fff!important;transform:translateY(-50%) scale(1.04)!important}
+.reference-hero-dots{position:absolute;z-index:6;left:50%;bottom:18px;transform:translateX(-50%);display:flex;gap:9px;align-items:center}
+.reference-hero-dots button{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(22,75,142,.35);cursor:pointer}
+.reference-hero-dots button.is-active{width:25px;border-radius:10px;background:#079fd0}
+@media(max-width:850px){.home-hero.reference-hero{height:560px!important;min-height:560px!important;max-height:560px!important}.reference-hero .hero-copy{width:78%!important}.reference-hero-image .hero-banner-slide{object-position:center 40%!important}.reference-hero-arrow{width:46px!important;height:52px!important;right:10px!important}.reference-hero-prev{left:10px!important;right:auto!important}}
+@media(max-width:600px){.home-hero.reference-hero{height:570px!important;min-height:570px!important;max-height:570px!important}.reference-hero-inner{align-items:center!important}.reference-hero .hero-copy{width:100%!important;padding:28px 12px 54px!important}.reference-hero .hero-copy h1{font-size:clamp(43px,12vw,54px)!important;line-height:1.02!important;margin-bottom:18px!important}.reference-hero .hero-lead{max-width:88%!important;font-size:16px!important;line-height:1.45!important;margin-bottom:24px!important}.reference-hero .hero-actions .button{padding:15px 22px!important;font-size:15px!important}.reference-hero-image .hero-banner-slide{object-position:center 38%!important}.reference-hero-image::after{background:linear-gradient(90deg,rgba(255,255,255,.91) 0%,rgba(255,255,255,.68) 48%,rgba(255,255,255,.12) 100%)!important}.reference-hero-arrow{top:50%!important;width:42px!important;height:48px!important;border-radius:14px!important;font-size:29px!important}.reference-hero-prev{left:8px!important}.reference-hero-next{right:8px!important}.reference-hero-dots{bottom:13px!important}}
+@media(prefers-reduced-motion:reduce){.reference-hero-image .hero-banner-slide{transition:none!important}}
