@@ -1076,48 +1076,31 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   .reference-hero .hero-copy,.cancer-services-heading,.cancer-service-card,.trust-credentials-grid article,.approach-grid article,.trust-clarity-grid article,.clinic-card,.home-blog-card{animation:none!important;transition:none!important}
 }
 
-
-/* Homepage featured blog carousel */
-.home-blog-carousel{width:100%;overflow:hidden;padding:0 0 16px}
-.home-blog-track{display:flex;flex-wrap:nowrap;align-items:stretch;width:200%;animation:home-blogs-slide 34s linear infinite;will-change:transform}
-.home-blog-carousel:hover .home-blog-track,.home-blog-carousel:focus-within .home-blog-track{animation-play-state:paused}
-.home-blog-track>.home-blog-card{box-sizing:border-box;flex:0 0 16.6667%;width:16.6667%;min-width:0;padding:0 12px 12px}
-@keyframes home-blogs-slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(max-width:950px){.home-blog-track{width:300%}.home-blog-track>.home-blog-card{flex-basis:16.6667%;width:16.6667%;padding-left:9px;padding-right:9px}}
-@media(max-width:600px){.home-blog-track{width:600%;animation-duration:38s}.home-blog-track>.home-blog-card{flex-basis:16.6667%;width:16.6667%;padding:0 9px 10px}.home-blog-card{height:100%}}
-@media(prefers-reduced-motion:reduce){.home-blog-track{animation:none!important}}
-
-/* Modern homepage trust and review refinements */
-.experience-kicker{display:inline-block;color:var(--teal);font-size:10px;font-weight:800;letter-spacing:2px;margin-bottom:14px}
-.doctor-experience-column h3{font-size:25px;line-height:1.25}
-.why-choose-section{background:#fff}
-.why-choose-heading,.patient-reviews-heading{max-width:760px;margin-bottom:36px}
-.why-choose-heading h2,.patient-reviews-heading h2{font-family:'Inter',Arial,sans-serif;font-size:clamp(32px,4vw,48px);line-height:1.15;font-weight:600;margin:12px 0}
-.why-choose-heading p,.patient-reviews-heading p{color:var(--muted);font-size:14px;max-width:680px}
-.why-choose-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-.why-choose-grid article{padding:25px 22px;background:#f4f7f4;border:1px solid var(--line);border-radius:3px;min-height:205px;transition:transform .25s ease,box-shadow .25s ease}
-.why-choose-grid article:hover{transform:translateY(-5px);box-shadow:0 16px 35px #102c3510}
-.why-choose-grid article>span{color:var(--gold);font-size:11px;letter-spacing:1.5px;font-weight:800}
-.why-choose-grid h3{font-family:'Inter',Arial,sans-serif;font-size:19px;line-height:1.25;margin:23px 0 9px}
-.why-choose-grid p{color:var(--muted);font-size:12px;line-height:1.75;margin:0}
-.patient-reviews-section{background:linear-gradient(135deg,#edf3ee,#f8faf7)}
-.patient-reviews-heading{max-width:none;display:flex;justify-content:space-between;align-items:end;gap:24px}
-.patient-reviews-heading>div{max-width:720px}
-.reviews-google-link{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid #b9cbc1;color:var(--navy);font-size:12px;font-weight:700;white-space:nowrap;border-radius:2px;transition:.2s}
-.reviews-google-link:hover{background:var(--navy);border-color:var(--navy);color:#fff}
-.patient-review-window{overflow:hidden;position:relative;padding:5px 0 18px}
-.patient-review-track{display:flex;gap:18px;width:max-content;animation:patientReviewScroll 32s linear infinite}
-.patient-review-window:hover .patient-review-track,.patient-review-window:focus-within .patient-review-track{animation-play-state:paused}
-.patient-review-card{width:min(390px,calc(100vw - 54px));min-height:225px;background:#fff;border:1px solid #dce6df;border-radius:5px;padding:25px;box-shadow:0 12px 35px #102c3508;display:flex;flex-direction:column}
-.review-card-top,.review-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px}
-.review-source{font-size:9px;letter-spacing:1.25px;font-weight:800;color:var(--teal)}
-.review-stars{font-size:14px;letter-spacing:2px;color:#b58b43;white-space:nowrap}
-.patient-review-card blockquote{font-family:'Inter',Arial,sans-serif;font-size:19px;line-height:1.5;color:var(--ink);margin:28px 0 auto}
-.review-card-bottom{border-top:1px solid var(--line);padding-top:15px;margin-top:25px;font-size:10px;color:var(--muted)}
-.review-card-bottom a{font-weight:700;color:var(--teal)}
-.reviews-disclaimer{font-size:10px;color:#73817c;margin:12px 0 0;line-height:1.6}
-@keyframes patientReviewScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media(prefers-reduced-motion:reduce){.patient-review-track{animation:none;transform:none}.why-choose-grid article{transition:none}}
-@media(max-width:900px){.why-choose-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:720px){.why-choose-grid{grid-template-columns:1fr 1fr;gap:10px}.why-choose-grid article{padding:19px 16px;min-height:190px}.why-choose-grid h3{font-size:17px;margin:17px 0 8px}.patient-reviews-heading{align-items:flex-start;flex-direction:column}.patient-reviews-heading h2{font-size:34px}.reviews-google-link{width:100%}.patient-review-card{padding:21px;min-height:215px}.patient-review-card blockquote{font-size:17px}.review-card-bottom{align-items:flex-start;flex-direction:column;gap:7px}}
-@media(max-width:380px){.why-choose-grid{grid-template-columns:1fr}.why-choose-grid article{min-height:0}}
+/* Mobile header drawer styled to match supplied reference video */
+.mobile-menu-backdrop{display:none}
+.mobile-drawer-close{display:none}
+@media(max-width:760px){
+ html body .doctor-reference-header{position:relative!important}
+ html body .doctor-topbar{background:#087fc5!important}
+ html body .doctor-identity-inner{position:relative!important;padding:13px 0!important}
+ html body .doctor-reference-header .doctor-identity-brand{flex:1 1 auto!important;width:auto!important;padding-right:48px!important}
+ html body .doctor-reference-header .doctor-identity-copy strong{font-size:20px!important;white-space:normal!important}
+ html body .doctor-reference-header .doctor-header-contact,html body .doctor-reference-header .doctor-header-hours{display:none!important}
+ html body .doctor-reference-header .doctor-nav-row{background:#fff!important}
+ html body .doctor-reference-header .doctor-nav-row .nav{width:100%!important;min-height:0!important;height:0!important;position:static!important;padding:0!important;gap:0!important}
+ html body .doctor-reference-header .doctor-nav-row .mobile-menu-toggle{position:absolute!important;right:14px!important;top:57px!important;width:42px!important;height:42px!important;z-index:100!important;background:#f0443e!important;border-radius:4px!important;align-items:center!important;justify-content:center!important}
+ html body .doctor-reference-header .doctor-nav-row .mobile-menu-toggle span{background:#fff!important;width:22px!important}
+ html body .doctor-reference-header .doctor-nav-row nav{display:flex!important;position:fixed!important;top:0!important;bottom:0!important;left:0!important;right:auto!important;width:min(82vw,340px)!important;height:100dvh!important;max-height:100dvh!important;overflow-y:auto!important;transform:translateX(-105%)!important;transition:transform .32s ease!important;background:#fff!important;box-shadow:8px 0 30px #0003!important;border-right:3px solid #f0443e!important;padding:76px 16px 24px!important;z-index:202!important;flex-direction:column!important;align-items:stretch!important;gap:0!important}
+ html body .doctor-reference-header .doctor-nav-row nav.is-open{display:flex!important;transform:translateX(0)!important}
+ html body .doctor-reference-header .doctor-nav-row nav>a,html body .doctor-reference-header .doctor-nav-row .nav-dropdown-trigger{display:flex!important;align-items:center!important;min-height:43px!important;padding:10px 5px!important;border-bottom:1px solid #edf0f3!important;color:#087fc5!important;font-size:13px!important;font-weight:500!important;white-space:normal!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown{width:100%!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown-row{display:flex!important;align-items:center!important;border-bottom:1px solid #edf0f3!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown-row .nav-dropdown-trigger{flex:1!important;border:0!important}
+ html body .doctor-reference-header .doctor-nav-row .mobile-submenu-toggle{display:grid!important;place-items:center!important;width:38px!important;height:40px!important;border:0!important;border-radius:50%!important;background:#f4f6f8!important;color:#e84b47!important;font-size:20px!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu{display:none!important;position:static!important;max-height:none!important;overflow:visible!important;padding:3px 0 8px 12px!important;margin:0!important;border:0!important;border-left:1px solid #e8edf1!important;box-shadow:none!important;background:#fff!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu.is-open{display:block!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-dropdown-menu a{display:block!important;padding:9px 5px!important;border-bottom:1px solid #f0f2f4!important;color:#087fc5!important;font-size:12px!important;line-height:1.4!important}
+ .mobile-drawer-close{display:grid!important;place-items:center!important;position:fixed!important;top:14px!important;left:min(calc(82vw - 23px),317px)!important;width:38px!important;height:38px!important;border:0!important;border-radius:50%!important;background:#f0443e!important;color:#fff!important;font-size:30px!important;line-height:1!important;z-index:204!important}
+ .mobile-menu-backdrop.is-open{display:block!important;position:fixed!important;inset:0!important;background:#0008!important;z-index:200!important}
+ html body .doctor-reference-header .doctor-nav-row .nav-booking{position:absolute!important;right:64px!important;top:58px!important;min-height:40px!important;padding:8px 12px!important;font-size:11px!important;z-index:99!important}
+}
