@@ -1104,3 +1104,11 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
  .mobile-menu-backdrop.is-open{display:block!important;position:fixed!important;inset:0!important;background:#0008!important;z-index:200!important}
  html body .doctor-reference-header .doctor-nav-row .nav-booking{position:absolute!important;right:64px!important;top:58px!important;min-height:40px!important;padding:8px 12px!important;font-size:11px!important;z-index:99!important}
 }
+
+.blog-article-cover{margin:0 0 28px;border-radius:22px;overflow:hidden;background:#fff0f7}
+.blog-article-cover img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+.blog-article-cover figcaption{padding:10px 16px;color:#59677f;font-size:.88rem}
+.blog-faq-section{margin-top:38px}
+.blog-faq-item{padding:18px 0;border-bottom:1px solid rgba(20,42,80,.14)}
+.blog-faq-item h3{margin:0 0 8px;font-size:1.08rem}
+.blog-faq-item p{margin:0}
