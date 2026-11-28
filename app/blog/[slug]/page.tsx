@@ -95,7 +95,7 @@ const articles: Record<string, Article> = {
     ],
     sources: [{label:"NHS – Preparing for an appointment",url:"https://www.nhs.uk/nhs-services/gps/"}],
     related: ["/clinics","/contact","/specialties/surgical-oncology"]
-  }
+  },
 
   "breast-self-assessment": {
     title: "Breast Self-Assessment: How to Check Your Breasts and Recognize Early Changes",
