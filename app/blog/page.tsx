@@ -14,7 +14,8 @@ export const metadata = {
   }
 };
 
-const articles = [\n  { category: "Breast Health", read: "5-step patient guide", title: "Breast self-assessment: how to check your breasts and recognize early changes", excerpt: "Understand breast awareness, notice unusual changes and learn when to seek a professional assessment.", href: "/blog/breast-self-assessment", tone: "blog-art-breast", tag: "Breast awareness" },
+const articles = [
+  { category: "Breast Health", read: "5-step patient guide", title: "Breast self-assessment: how to check your breasts and recognize early changes", excerpt: "Understand breast awareness, notice unusual changes and learn when to seek a professional assessment.", href: "/blog/breast-self-assessment", tone: "blog-art-breast", tag: "Breast awareness" },
   { category: "Surgical Oncology", read: "Patient guide", title: "Understanding a surgical oncology consultation", excerpt: "What to expect during an appointment, which reports may be useful and how treatment discussions are approached.", href: "/blog/surgical-oncology-consultation", tone: "blog-art-oncology", tag: "Cancer care" },
   { category: "Breast Health", read: "Patient guide", title: "Breast lump assessment: tests and next steps", excerpt: "A practical overview of clinical assessment, imaging, biopsy reports and questions patients may wish to ask.", href: "/blog/breast-lump-assessment", tone: "blog-art-breast", tag: "Breast" },
   { category: "Endocrine Surgery", read: "Patient guide", title: "Thyroid nodules: understanding the assessment", excerpt: "Learn about common investigations used to evaluate thyroid nodules and when specialist review may be recommended.", href: "/blog/thyroid-nodules-assessment", tone: "blog-art-thyroid", tag: "Thyroid" },
