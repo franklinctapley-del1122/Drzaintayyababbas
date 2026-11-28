@@ -3,6 +3,7 @@ import Link from "next/link";
 import {Shell,CTA,wa} from "./components";
 import ExperienceCounter from "./components/ExperienceCounter";
 import HeroBanner from "./components/HeroBanner";
+import ServicesCarousel from "./components/ServicesCarousel";
 
 export const metadata={
   title:"Surgical Oncologist & Endocrine Surgeon in Lahore | Dr. Zain Tayyab Abbas",
@@ -53,26 +54,8 @@ export default function Home(){
     </div>
   </div></section>
   {/* Professional credentials and clinical background */}
-  {/* Cancer care services */}
-  <section className="cancer-services-section"><div className="container">
-    <div className="cancer-services-heading"><span>CONSULTATION AREAS</span><h2>Cancer Care &amp; Surgical Services</h2><p>Explore specialist consultation information for common surgical oncology and endocrine concerns.</p></div>
-    <div className="cancer-services-slider" aria-label="Surgical services carousel">
-      <div className="cancer-services-track">
-        {[
-          {title:"Breast Cancer Consultation",href:"/specialties/breast-cancer-consultation",src:"https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85",alt:"Breast health consultation"},
-          {title:"Thyroid & Endocrine Surgery",href:"/specialties/endocrine-surgery",src:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85",alt:"Thyroid and neck health consultation"},
-          {title:"Gastrointestinal Cancer Care",href:"/specialties/gastric-cancer-information",src:"https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85",alt:"Gastrointestinal health consultation"},
-          {title:"Surgical Oncology",href:"/specialties/surgical-oncology",src:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85",alt:"Surgical oncology consultation"}
-        ].concat([
-          {title:"Breast Cancer Consultation",href:"/specialties/breast-cancer-consultation",src:"https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=85",alt:"Breast health consultation"},
-          {title:"Thyroid & Endocrine Surgery",href:"/specialties/endocrine-surgery",src:"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=900&q=85",alt:"Thyroid and neck health consultation"},
-          {title:"Gastrointestinal Cancer Care",href:"/specialties/gastric-cancer-information",src:"https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=900&q=85",alt:"Gastrointestinal health consultation"},
-          {title:"Surgical Oncology",href:"/specialties/surgical-oncology",src:"https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=900&q=85",alt:"Surgical oncology consultation"}
-        ]).map((item,index)=><article className="cancer-service-card" key={index} aria-hidden={index>=4 ? true : undefined}><div className="cancer-service-image"><img src={item.src} alt={index>=4 ? "" : item.alt} loading="lazy"/></div><div className="cancer-service-info"><h3>{item.title}</h3><Link href={item.href} tabIndex={index>=4 ? -1 : undefined}>Learn more <span>→</span></Link></div></article>)}
-      </div>
-    </div>
-    <div className="cancer-services-action"><Link href="/specialties">View All Services</Link></div>
-  </div></section>
+  {/* Specialist services carousel */}
+  <ServicesCarousel/>
   {/* 05 */}
   <section className="section premium-approach"><div className="container"><SectionHead kicker="The consultation experience" title="A considered approach to every patient" desc="A clear consultation helps patients understand the next step without unrealistic promises or unnecessary confusion."/><div className="approach-grid"><article><span>01</span><h3>Listen & understand</h3><p>Discuss symptoms, medical history, concerns and the reason for referral.</p></article><article><span>02</span><h3>Review the evidence</h3><p>Consider available examination findings, imaging, pathology and laboratory reports.</p></article><article><span>03</span><h3>Explain options</h3><p>Discuss appropriate next steps, possible approaches and when another specialist is needed.</p></article><article><span>04</span><h3>Plan follow-up</h3><p>Clarify the recommended follow-up and what information the patient should keep.</p></article></div></div></section>
   {/* 12 */}
