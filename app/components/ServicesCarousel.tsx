@@ -39,7 +39,7 @@ export default function ServicesCarousel(){
       </div>
       <div className="services-carousel-shell" onMouseEnter={()=>setPaused(true)} onMouseLeave={()=>setPaused(false)} onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
         <div className="cancer-services-slider">
-          <div className="cancer-services-track" style={{transform:`translateX(-${active*(100/services.length)}%)`}}>
+          <div className="cancer-services-track" style={{transform:`translate3d(-${active*100}%,0,0)`}}>
             {services.map((service,index)=><article className="cancer-service-card" key={service.number}>
               <div className="cancer-service-image"><img src={service.image} alt={service.alt} loading={index<3?"eager":"lazy"}/><span className="service-image-number">{service.number}</span></div>
               <div className="cancer-service-info"><span className="service-card-kicker">SPECIALIST CONSULTATION</span><h3>{service.title}</h3><p>{service.description}</p><Link href={service.href}>Explore service <span aria-hidden="true">↗</span></Link></div>
