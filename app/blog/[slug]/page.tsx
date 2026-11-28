@@ -7,6 +7,8 @@ type Article = {
   sections: { heading: string; paragraphs: string[]; bullets?: string[] }[];
   sources: { label: string; url: string }[];
   related: string[];
+  faqs?: { question: string; answer: string }[];
+  cover?: string;
 };
 
 const articles: Record<string, Article> = {
@@ -108,7 +110,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: article.title + " | Patient Education Lahore",
     description: article.excerpt,
     alternates: { canonical: "/blog/" + slug },
-    openGraph: { title: article.title, description: article.excerpt, type: "article" }
+    openGraph: { title: article.title, description: article.excerpt, type: "article", images: article.cover ? [{ url: article.cover, alt: article.title }] : undefined },\n    twitter: { card: "summary_large_image", title: article.title, description: article.excerpt, images: article.cover ? [article.cover] : undefined }
   };
 }
 
@@ -119,11 +121,11 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
   return <Shell><main className="blog-article-page">
     <div className="container blog-article-wrap">
       <nav className="blog-breadcrumb" aria-label="Breadcrumb"><Link href="/">Home</Link><span>/</span><Link href="/blog">Blog</Link><span>/</span><span>{article.category}</span></nav>
-      <header className="blog-article-header"><span className="eyebrow">{article.category} · PATIENT EDUCATION</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="blog-article-byline">Professional profile: <Link href="/about">Dr. Zain Tayyab Abbas</Link> <span>•</span> General patient education <span>•</span> External references listed below</div></header>
+      {article.cover && <figure className="blog-article-cover"><img src={article.cover} alt="Breast self-assessment guide featuring Dr. Zain Tayyab Abbas and five breast-awareness steps" width="1600" height="900" fetchPriority="high"/><figcaption>Breast self-awareness: notice changes and seek medical advice when needed.</figcaption></figure>}\n      <header className="blog-article-header"><span className="eyebrow">{article.category} · PATIENT EDUCATION</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="blog-article-byline">Professional profile: <Link href="/about">Dr. Zain Tayyab Abbas</Link> <span>•</span> General patient education <span>•</span> External references listed below</div></header>
       {slug === "prepare-for-surgical-consultation" && <h2>Under Development</h2>}
       <article className="blog-article-content">
         <p className="blog-article-lead">{article.intro}</p>
-        {article.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs?.map((p) => <p key={p}>{p}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}</section>)}
+        {article.sections.map((section) => <section key={section.heading}><h2>{section.heading}</h2>{section.paragraphs?.map((p) => <p key={p}>{p.split(/(\\[[^\\]]+\\]\\([^\\)]+\\))/g).map((part) => { const match = part.match(/^\\[([^\\]]+)\\]\\(([^\\)]+)\\)$/); return match ? <Link key={part} href={match[2]}>{match[1]}</Link> : part; })}</p>)}{section.bullets && <ul>{section.bullets.map((item) => <li key={item}>{item}</li>)}</ul>}</section>)}\n        {article.faqs && <section className="blog-faq-section"><h2>Frequently asked questions</h2>{article.faqs.map((faq) => <div className="blog-faq-item" key={faq.question}><h3>{faq.question}</h3><p>{faq.answer}</p></div>)}</section>}
         <section className="blog-source-list"><h2>Further reading</h2><p>These external resources provide additional general information. They do not replace individual medical advice.</p><ul>{article.sources.map((source) => <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a></li>)}</ul></section>
         <p className="blog-medical-note"><strong>Medical note:</strong> This article is general education and is not presented as an individually reviewed clinical recommendation. It is not a diagnosis or personal treatment plan and cannot replace assessment by a qualified healthcare professional. Seek urgent medical care for severe or rapidly worsening symptoms.</p>
         <div className="blog-article-related"><h2>Related information</h2>{article.related.map((href) => <Link key={href} href={href}>{href === "/clinics" ? "Clinic locations" : href === "/contact" ? "Contact the clinic" : href === "/research" ? "Research and publications" : "Explore related information"} ↗</Link>)}</div>
