@@ -1196,6 +1196,7 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  min-height:320px;
   background:#102c35;
   color:#fff;
   border-color:rgba(255,255,255,.2);
@@ -1205,7 +1206,7 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   position:absolute;
   inset:0;
   z-index:-1;
-  background:linear-gradient(105deg,rgba(8,29,40,.88),rgba(8,29,40,.67) 58%,rgba(8,29,40,.4));
+  background:linear-gradient(90deg,rgba(8,29,40,.48) 0%,rgba(8,29,40,.24) 52%,rgba(8,29,40,.08) 100%),linear-gradient(0deg,rgba(8,29,40,.28),transparent 62%);
 }
 .clinic-card.location-photo .clinic-location-photo{
   position:absolute;
@@ -1215,7 +1216,8 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   height:100%;
   object-fit:cover;
   object-position:center;
-  opacity:.82;
+  opacity:1;
+  transform:scale(1.015);
 }
 .clinic-card.location-photo>*:not(.clinic-location-photo){
   position:relative;
@@ -1229,8 +1231,8 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
 .clinic-card.location-photo .hours span{
   color:#fff;
 }
-.clinic-card.location-photo p{max-width:520px;color:rgba(255,255,255,.9)}
-.clinic-card.location-photo .clinic-index{color:#c5e7f5}
+.clinic-card.location-photo p{max-width:520px;color:rgba(255,255,255,.96);text-shadow:0 1px 4px rgba(0,0,0,.35)}
+.clinic-card.location-photo .clinic-index{color:#e0f5ff;text-shadow:0 1px 4px rgba(0,0,0,.4)}
 .clinic-card.location-photo .hours strong{color:#fff}
 .clinic-card.location-photo .button{
   background:#fff;
@@ -1238,6 +1240,6 @@ html body .doctor-reference-header .doctor-header-contact-icon{border-color:#079
   border-color:#fff;
 }
 @media(max-width:640px){
-  .clinic-card.location-photo{min-height:280px;padding:24px}
+  .clinic-card.location-photo{min-height:300px;padding:24px}
   .clinic-card.location-photo .clinic-location-photo{object-position:center}
 }
